@@ -1,0 +1,14 @@
+.footer{
+    color: white;
+    padding: 10px 10px 10px 10px;
+}
+
+.footer ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+.footer ul li {
+display: inline;
+padding-left: 10px;
+}
