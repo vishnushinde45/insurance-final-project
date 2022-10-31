@@ -13,6 +13,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CustomerLoginComponent } from './customer/customer-login/customer-login.component';
 import { CustomerNavComponent } from './customer/customer-nav/customer-nav.component';
 import { CustomerRegistrationComponent } from './customer/customer-registration/customer-registration.component';
+import { CustomerDashboardComponent } from './customer/customer-dashboard/customer-dashboard.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { PageNotFoundComponent } from './pageNotFound/page-not-found/page-not-found.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
+import { ViewCustomersComponent } from './admin/view-customers/view-customers.component';
 
 
 
@@ -25,7 +31,13 @@ import { CustomerRegistrationComponent } from './customer/customer-registration/
     HomeNavComponent,
     CustomerLoginComponent,
     CustomerNavComponent,
-    CustomerRegistrationComponent
+    CustomerRegistrationComponent,
+    CustomerDashboardComponent,
+    AdminLoginComponent,
+    PageNotFoundComponent,
+    AdminDashboardComponent,
+    AdminNavComponent,
+    ViewCustomersComponent
   ],
   imports: [
     BrowserModule,

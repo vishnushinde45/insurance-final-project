@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import {FormBuilder,FormGroup,FormControl,Validators} from '@angular/forms';
-import { HttpClient } from  '@angular/common/http';
 import { CustomerService } from '../customer-service.service';
 
 
@@ -12,7 +11,7 @@ import { CustomerService } from '../customer-service.service';
 })
 export class CustomerRegistrationComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder,private http: HttpClient,private customerService:CustomerService) { }
+  constructor(private formBuilder:FormBuilder,private customerService:CustomerService) { }
 
   ngOnInit(): void {
   }
@@ -32,7 +31,7 @@ export class CustomerRegistrationComponent implements OnInit {
     nomineeRelation:new FormControl(),
   });
 
-
+  
   addCustomer(){
      this.customerService.addCustomer(this.addCustomerForm.value);
   }

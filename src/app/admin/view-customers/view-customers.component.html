@@ -1,0 +1,41 @@
+<app-admin-nav></app-admin-nav>
+<h3 align="center">Customers</h3> <hr>
+ <div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary" >
+  
+        <table class="table table-striped" id="myTable">
+            <thead>
+              <tr>
+                <th>Sr.</th>
+                <th>Full Name</th>
+                <th>Username</th>
+                <th>Date of Birth</th>
+                <th>Agent ID</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let customer of Customers ,let i=index">
+                <td>{{i+1}}</td>
+                <td>{{customer.fullName}}</td>
+                <td>{{customer.username}}</td>
+                <td> {{customer.dateOfBirth}}</td>
+                <td>{{customer.agentId}}</td>
+                <td>{{customer.state}}</td>
+                <td>{{customer.city}}</td>
+                <td> <a href="URL">Delete |</a><a href="URL">Edit</a></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+
+</div>
+<script>
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+
+</script>

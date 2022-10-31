@@ -1,0 +1,80 @@
+
+<app-admin-nav></app-admin-nav>
+<h4 align="center">Welcome {{Admin.fullName}}</h4>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                 <a href="#">
+                    <div class="text-center">
+                        <img src="assets\images\admin_images\agent.png" alt="" height="120px" width="120px">
+                      </div>
+                      <br>
+                      <div class="text-center">
+                        <h4>Agents</h4>
+                      </div>
+                 </a>
+                  
+            </div>
+            <div class="col-md-3">
+                 <a href="view-employee-records.html">
+                    <div class="text-center">
+                        <img src="assets\images\admin_images\employees.png" alt="" height="120px" width="120px">
+                      </div>
+                      <br>
+                      <div class="text-center">
+                        <h4>Employees</h4>
+                      </div>
+                 </a>
+            </div>
+            <div class="col-md-3">
+                <a [routerLink]="'/admin/view-customers'">
+                    <div class="text-center">
+                        <img src="assets\images\admin_images\customers.png" alt="" height="120px" width="120px">
+                      </div>
+                      <br>
+                      <div class="text-center">
+                        <h4>View Customers</h4>
+                      </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <a href="#">
+                    <div class="text-center">
+                        <img src="assets\images\admin_images\policies.png" alt="" height="120px" width="120px">
+                      </div>
+                      <br>
+                      <div class="text-center">
+                        <h4>Insurance Plans & Policies</h4>
+                      </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="View-Policy-Payment.html">
+                    <div class="text-center">
+                        <img src="assets\images\admin_images\policy payment.jpg" alt="" height="120px" width="120px">
+                      </div>
+                      <br>
+                      <div class="text-center">
+                        <h4>Policy Payment</h4>
+                      </div>
+                </a>
+            </div>
+            <div class="col-md-3 ">
+                <a href="View-policy-Claim-Records.html">
+                    <div class="text-center">
+                        <img src="assets\images\admin_images\policy claim.png" alt="" height="120px" width="120px">
+                      </div>
+                      <br>
+                      <div class="text-center">
+                        <h4>Policy Claim</h4>
+                      </div>
+                </a>
+            </div>
+        </div>
+        
+    </div>
