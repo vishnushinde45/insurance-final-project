@@ -1,0 +1,109 @@
+
+
+<div class="bg-dark">
+    <img
+      src="assets\images\admin_images\logo.png"
+      height="100px" width="180px"
+      alt="Sun Insurance"
+      loading="lazy"
+      style="margin-top: 6px; margin-left: 10px;"
+    />
+     
+
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/admin/dashboard'">DASHBOARD</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              USERS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Adding-employee-records.html">ADD EMPLOYEE</a></li>
+              <li><a class="dropdown-item" href="view-employee-records.html">VIEW EMPLOYEES</a></li>
+              <li><a class="dropdown-item" href="#">VIEW AGENTS</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/admin/view-customers'">VIEW CUSTOMERS</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              INSURANCE
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="Adding-insurance-type.html">Add Insurance Type</a></li>
+                <li><a class="dropdown-item" href="#">Add Insurance Scheme</a></li>
+                <li><a class="dropdown-item" href="add_insurance_plan.html">Add Insurance Plan</a></li>
+                <li><a class="dropdown-item" href="View-insurance-plans.html">View Insurance Plan</a></li>
+              <li><a class="dropdown-item" href="View-Policy-Payment.html">View Policy Payment</a></li>
+              <li><a class="dropdown-item" href="View-policy-Claim-Records.html">View Policy Claim</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              COMMISION
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="View-Commision-Records.html">VIEW COMMISSION</a></li>
+              <li><a class="dropdown-item" href="View-Commision-Withdrawls.html">VIEW COMMISSION WITHDRAWL</a></li>
+        
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             QUERIES
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">ENQUIRY</a></li>
+              <li><a class="dropdown-item" href="view-feedback.html">FEEDBACK</a></li>
+           
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             SETTINGS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">TAX SETTING</a></li>
+              <li><a class="dropdown-item" href="#">INSURANCE SETTING</a></li>
+           
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             ACCOUNT
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="admin_profile.html">PROFILE</a></li>
+              <li><a class="dropdown-item" href="admin_changepassword.html">CHANGE PASSWORD</a></li>
+           
+            </ul>
+          </li>
+
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">LOG OUT</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<hr>
