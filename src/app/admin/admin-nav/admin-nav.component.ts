@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InsuranceService } from 'src/app/InsuranceService/insurance.service';
 
 @Component({
   selector: 'app-admin-nav',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private insuranceService:InsuranceService) { }
 
+  insuranceTypes:any;
   ngOnInit(): void {
+    this.insuranceService.getInsuranceTypes().subscribe((res)=>{
+      this.insuranceTypes=res;
+      console.log(this.insuranceTypes);
+      
+    },(err)=>{
+      console.log(err);
+      
+    });
   }
 
 }

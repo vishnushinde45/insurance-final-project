@@ -1,0 +1,34 @@
+
+<app-admin-nav></app-admin-nav>
+<h2 class="text-center">View Employee Records</h2>
+    <hr>
+    
+    <div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary" >
+            <table class="table table-striped" >
+                <thead>
+                  <tr>
+                    <th>Sr</th>
+                    <th>Employee Name</th>
+                    <th>Username</th>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let employee of Employees, let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{employee.fullName}}</td>
+                    <td> {{employee.username}}</td>
+                    <td>{{employee.state}}</td>
+                    <td>{{employee.city}}</td>
+                    <td>{{employee.status}}</td>
+                    <td> <a href="URL">Delete |</a><a href="URL">Edit</a></td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+
+
+    </div>

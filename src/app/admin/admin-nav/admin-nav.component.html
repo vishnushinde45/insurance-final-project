@@ -29,27 +29,28 @@
               USERS
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="Adding-employee-records.html">ADD EMPLOYEE</a></li>
-              <li><a class="dropdown-item" href="view-employee-records.html">VIEW EMPLOYEES</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/admin/add-employee'">ADD EMPLOYEE</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/admin/view-employees'">VIEW EMPLOYEES</a></li>
               <li><a class="dropdown-item" href="#">VIEW AGENTS</a></li>
               <li><a class="dropdown-item" [routerLink]="'/admin/view-customers'">VIEW CUSTOMERS</a></li>
             </ul>
           </li>
-
+          
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               INSURANCE
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="Adding-insurance-type.html">Add Insurance Type</a></li>
-                <li><a class="dropdown-item" href="#">Add Insurance Scheme</a></li>
-                <li><a class="dropdown-item" href="add_insurance_plan.html">Add Insurance Plan</a></li>
-                <li><a class="dropdown-item" href="View-insurance-plans.html">View Insurance Plan</a></li>
+                <li><a class="dropdown-item" [routerLink]="'/admin/add-insurance-type'">Add Insurance Type</a></li>
+                <li><a class="dropdown-item" [routerLink]="'/admin/add-insurance-scheme'">Add Insurance Scheme</a></li>
+                <li><a class="dropdown-item" [routerLink]="'/admin/add-insurance-plan'">Add Insurance Plan</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/admin/view-insurance-schemes']">View Insurance Plans</a></li>
               <li><a class="dropdown-item" href="View-Policy-Payment.html">View Policy Payment</a></li>
               <li><a class="dropdown-item" href="View-policy-Claim-Records.html">View Policy Claim</a></li>
             </ul>
           </li>
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               COMMISION
@@ -75,8 +76,7 @@
              SETTINGS
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">TAX SETTING</a></li>
-              <li><a class="dropdown-item" href="#">INSURANCE SETTING</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/admin/add-insurance-setting'" >INSURANCE SETTING</a></li>
            
             </ul>
           </li>

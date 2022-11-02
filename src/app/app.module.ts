@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from  '@angular/common/http';
 import { HttpClient } from  '@angular/common/http';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,18 @@ import { PageNotFoundComponent } from './pageNotFound/page-not-found/page-not-fo
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
 import { ViewCustomersComponent } from './admin/view-customers/view-customers.component';
+import { AddEmployeeComponent } from './admin/add-employee/add-employee.component';
+import { ViewEmployeesComponent } from './admin/view-employees/view-employees.component';
+import { AddInsuranceTypeComponent } from './admin/add-insurance-type/add-insurance-type.component';
+import { ViewInsuranceSchemesComponent } from './admin/view-insurance-schemes/view-insurance-schemes.component';
+import { AddInsuranceSchemeComponent } from './admin/add-insurance-scheme/add-insurance-scheme.component';
+import { AddInsurancePlanComponent } from './admin/add-insurance-plan/add-insurance-plan.component';
+import { AddTaxSettingComponent } from './admin/add-tax-setting/add-tax-setting.component';
+import { AgentNavComponent } from './agent/agent-nav/agent-nav.component';
+import { AgentLoginComponent } from './agent/agent-login/agent-login.component';
+import { AgentDashboardComponent } from './agent/agent-dashboard/agent-dashboard.component';
+import { AddCustomerComponent } from './agent/add-customer/add-customer.component';
+
 
 
 
@@ -37,7 +50,19 @@ import { ViewCustomersComponent } from './admin/view-customers/view-customers.co
     PageNotFoundComponent,
     AdminDashboardComponent,
     AdminNavComponent,
-    ViewCustomersComponent
+    ViewCustomersComponent,
+    AddEmployeeComponent,
+    ViewEmployeesComponent,
+    AddInsuranceTypeComponent,
+    ViewInsuranceSchemesComponent,
+    AddInsuranceSchemeComponent,
+    AddInsurancePlanComponent,
+    AddTaxSettingComponent,
+    AgentNavComponent,
+    AgentLoginComponent,
+    AgentDashboardComponent,
+    AddCustomerComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -45,7 +70,8 @@ import { ViewCustomersComponent } from './admin/view-customers/view-customers.co
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

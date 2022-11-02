@@ -1,0 +1,92 @@
+<h2 class="text-center">Customer Registration</h2>
+<hr>
+<div style="margin-top: 2%; margin-bottom: 5px;" class="container border border-primary">
+    <form [formGroup]="addCustomerForm">
+        <div class="row mb-3">
+            <label for="inputName" class="col-sm-2 col-form-label">Customer Name:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputName" formControlName="fullName" required>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputUsername" class="col-sm-2 col-form-label">Username :</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputUsername" formControlName="username" required>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password :</label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" id="inputPassword" formControlName="password" required>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputDOB" class="col-sm-2 col-form-label">Date of Birth:</label>
+            <div class="col-sm-8">
+                <input type="date" class="form-control" id="inputDOB" formControlName="dateOfBirth" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="inputAddress" class="col-sm-2 col-form-label" autocomplete="off">Address:</label>
+            <div class="col-sm-8">
+                <input type="lo" class="form-control" id="inputAddress" formControlName="address" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email ID:</label>
+            <div class="col-sm-8">
+                <input type="email" class="form-control" id="inputEmail" formControlName="emailId" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="inputState" class="col-sm-2 col-form-label">State:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputState" formControlName="state" required>
+            </div>
+        </div>
+
+        <div class="row mb-3 ">
+            <label for="inputCity" class="col-sm-2 col-form-label">City:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputCity" formControlName="city" required>
+                
+            </div>
+        </div>
+
+
+        <div class="row mb-3">
+            <label for="inputPin" class="col-sm-2 col-form-label">Pincode:</label>
+            <div class="col-sm-8">
+                <input type="number" class="form-control" id="inputPin" formControlName="pincode" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="mobileNo" class="col-sm-2 col-form-label">Mobile Number:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputPin" formControlName="mobileNo" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="inputNominee" class="col-sm-2 col-form-label">Nominee:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputNominee" formControlName="nomineeName" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="inputRelation" class="col-sm-2 col-form-label">Nominee Relation:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputRelation" formControlName="nomineeRelation" required>
+            </div>
+        </div>
+    
+        <div class="text-center">
+            <button type="submit" class="btn btn-danger" (click)="addCustomer()" >Submit</button>
+        </div>
+
+

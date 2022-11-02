@@ -1,0 +1,38 @@
+
+<app-admin-nav></app-admin-nav>
+ <h1 class="text-center">View Insurance Plan</h1>
+
+ <div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary" >
+         <table class="table table-striped" >
+             <thead>
+               <tr>
+                 <th>Insurance Type</th>
+                 <th>Insurance Scheme</th>
+                 <th>Policy Term Min</th>
+                 <th>Policy Term Max</th>
+                 <th> Min Age</th>
+                 <th> Max Age</th>
+                 <th> Min Investment AMT</th>
+                 <th> Max Investment AMT</th>
+                 <th> Profit Ratio</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr *ngFor="let plan of insurancePlans">
+                 <td>{{plan.insuranceScheme.insuranceType.insuranceType}}</td>
+                 <td>{{plan.insuranceScheme.insuranceSchemeName}}</td>
+                 <td>{{plan.minimumPolicyTerm}}</td>
+                 <td>{{plan.maximumPolicyTerm}}</td>
+                 <td>{{plan.minimumAge}}</td>
+                 <td>{{plan.maximumAge}}</td>
+                 <td>{{plan.minimumInvestment}}</td>
+                 <td>{{plan.maximumInvestment}}</td>
+                 <td>{{plan.profitRatio}}</td>
+               </tr>
+
+             </tbody>
+           </table>
+
+
+  
+ </div>
