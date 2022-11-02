@@ -9,12 +9,12 @@ import { CustomerService } from '../customer-service.service';
   styleUrls: ['./customer-login.component.css']
 })
 export class CustomerLoginComponent implements OnInit {
-
+  formSubmitted:boolean= false;
   constructor(private formBuilder:FormBuilder,private customerService:CustomerService,private router:Router) { }
 
   customerLoginDetails=this.formBuilder.group({
-    username:new FormControl(),
-    password:new FormControl(),
+    username:new FormControl("",[Validators.required,Validators.minLength(5),Validators.pattern('^[a-zA-z]+$')]),
+    password:new FormControl("",[Validators.required,Validators.minLength(5),Validators.pattern('^[a-zA-Z0-9]+$')]),
     
   });
   
@@ -34,5 +34,12 @@ export class CustomerLoginComponent implements OnInit {
 
   
     
+  }
+  addCustomer(){
+    this.customerService.addCustomer(this.customerLoginDetails.value);
+    this.formSubmitted = true;
+ }
+  get getControl(){
+    return this.customerLoginDetails.controls;
   }
 }

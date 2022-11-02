@@ -14,12 +14,13 @@ export class AdminLoginComponent implements OnInit {
   constructor(private formBuilder:FormBuilder,private adminService:AdminService,private router:Router) { }
 
   adminLoginDetails=this.formBuilder.group({
-    username:new FormControl(),
-    password:new FormControl(),
+    username:new FormControl("",[Validators.required,Validators.pattern('^[a-zA-z]+$')]),
+    password:new FormControl("",[Validators.required,Validators.pattern('^[a-zA-Z0-9]+$')]),
     
   });
  
   ngOnInit(): void {
+    
   }
 
   responseData:any;
@@ -32,6 +33,11 @@ export class AdminLoginComponent implements OnInit {
               console.log(err);
               
    }));
-
+  
    
-}}
+}
+get getControl(){
+  return this.adminLoginDetails.controls;
+}
+
+}

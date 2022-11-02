@@ -10,30 +10,35 @@ import { CustomerService } from '../customer-service.service';
   styleUrls: ['./customer-registration.component.css']
 })
 export class CustomerRegistrationComponent implements OnInit {
+  formSubmitted:boolean= false;
 
   constructor(private formBuilder:FormBuilder,private customerService:CustomerService) { }
 
   ngOnInit(): void {
+    const formSubmitted = false;
   }
 
   addCustomerForm=this.formBuilder.group({
-    fullName:new FormControl(),
-    username:new FormControl(),
-    emailId:new FormControl(),
-    password:new FormControl(),
-    dateOfBirth:new FormControl(),
-    address:new FormControl(),
-    state:new FormControl(),
-    city:new FormControl(),
-    pincode:new FormControl(),
-    nomineeName:new FormControl(),
-    mobileNo:new FormControl(),
-    nomineeRelation:new FormControl(),
+    fullName:new FormControl("",[Validators.required]),
+    username:new FormControl("",[Validators.required,Validators.minLength(4)]),
+    emailId:new FormControl("",[Validators.email,Validators.required]),
+    password:new FormControl("",[Validators.required,Validators.pattern('^[a-zA-Z0-9]+$'),Validators.minLength(4)]),
+    dateOfBirth:new FormControl("",[Validators.required]),
+    address:new FormControl("",[Validators.required]),
+    state:new FormControl("",[Validators.required]),
+    city:new FormControl("",[Validators.required]),
+    pincode:new FormControl("",[Validators.required]),
+    nomineeName:new FormControl("",[Validators.required]),
+    mobileNo:new FormControl("",[Validators.required]),
+    nomineeRelation:new FormControl("",[Validators.required]),
   });
 
   
   addCustomer(){
      this.customerService.addCustomer(this.addCustomerForm.value);
+     this.formSubmitted = true;
   }
-
+  get getControl(){
+    return this.addCustomerForm.controls;
+  }
 }
