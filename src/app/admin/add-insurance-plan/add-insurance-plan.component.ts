@@ -29,7 +29,7 @@ export class AddInsurancePlanComponent implements OnInit {
       
    })
   }
-
+message:boolean=false;
   addInsurancePlanForm=this.formBuilder.group({
     insuranceTypeId:new FormControl(null,[Validators.required]),
     insuranceSchemeId:new FormControl(null,[Validators.required]),
@@ -47,7 +47,8 @@ export class AddInsurancePlanComponent implements OnInit {
     
         this.insuranceService.addInsurancePlan(this.addInsurancePlanForm.value,this.addInsurancePlanForm.value.insuranceTypeId,this.addInsurancePlanForm.value.insuranceSchemeId).subscribe((res)=>{
           console.log(res);
-          
+          this.message=true;
+     this.addInsurancePlanForm.reset({ });
         },(err)=>{
           console.log(err);
           
@@ -57,5 +58,7 @@ export class AddInsurancePlanComponent implements OnInit {
   getControl(){
     return this.addInsurancePlanForm.controls;
   }
-
+  removeMesssag(){
+    this.message=false;
+  }
 }

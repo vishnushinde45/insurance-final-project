@@ -14,10 +14,10 @@ export class AddInsuranceTypeComponent implements OnInit {
   
   ngOnInit(): void {
   }
-
+  message:boolean=false;
   addInsuranceTypeForm=this.formBuilder.group({
-    insuranceType:new FormControl(),
-    status:new FormControl(),
+    insuranceType:new FormControl("",Validators.required),
+    status:new FormControl("",Validators.required),
   });
 
   errorMessage:any;
@@ -25,7 +25,8 @@ export class AddInsuranceTypeComponent implements OnInit {
   addInsuranceType(){
     this.insuranceService.addInsuranceType(this.addInsuranceTypeForm.value).subscribe((res)=>{
       console.log(res);
-      
+      this.message=true;
+     this.addInsuranceTypeForm.reset({ });
      
     },(err)=>{
      this.errorMessage=err;
@@ -33,5 +34,10 @@ export class AddInsuranceTypeComponent implements OnInit {
      
     });
  }
-
+ get getControl(){
+  return this.addInsuranceTypeForm.controls;
+}
+ removeMesssag(){
+  this.message=false;
+}
 }

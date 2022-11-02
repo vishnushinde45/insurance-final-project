@@ -24,7 +24,7 @@ export class AddInsuranceSchemeComponent implements OnInit {
   });
   
   insuranceTypes:any;
-
+  
   ngOnInit(): void {
     this.insuranceService.getInsuranceTypes().subscribe((res)=>{
        this.insuranceTypes=res;
@@ -32,6 +32,7 @@ export class AddInsuranceSchemeComponent implements OnInit {
        
     })
   }
+  message:boolean=false;
   config: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
@@ -46,11 +47,14 @@ export class AddInsuranceSchemeComponent implements OnInit {
   addScheme(){
     this.insuranceService.addInsuranceScheme(this.addSchemeForm.value,this.addSchemeForm.value.insuranceTypeId).subscribe((res)=>{
       console.log(res);
-      
+      this.message=true;
+     this.addSchemeForm.reset({ });
     })
      
       
   }
 
-
+  removeMesssag(){
+    this.message=false;
+  }
 }

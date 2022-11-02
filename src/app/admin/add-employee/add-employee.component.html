@@ -1,7 +1,10 @@
 <app-admin-nav></app-admin-nav>
 <h4 align="center">Employee Registration</h4>
-    <hr>
-    
+    <hr><br>
+    <div *ngIf="message"   class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Success!</strong> new Insurance type being added.
+      <button (click)="removeMesssag()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
@@ -11,13 +14,22 @@
                       <label for="empName" class="col-sm-2 col-form-label">Full Name :</label>
                       <div class="col-sm-8">
                         <input type="text" class="form-control" id="empName" formControlName="fullName" required>
+                        <div *ngIf="getControl.fullName.touched && getControl.fullName.invalid" class="text-danger">
+                          <div *ngIf="getControl.fullName.errors">Full Name is required.</div>
+                          <br>
+                  </div><br>
                       </div>
+
                     </div>
           
                     <div class="row mb-3">
                       <label for="username" class="col-sm-2 col-form-label">Username :</label>
                       <div class="col-sm-8">
                         <input type="text" class="form-control" id="username" formControlName="username" required>
+                        <div *ngIf="getControl.username.touched && getControl.username.invalid" class="text-danger">
+                          <div *ngIf="getControl.username.errors">User Name is required.</div>
+                          <br>
+                  </div><br>
                       </div>
                     </div>
           
@@ -27,12 +39,20 @@
                       <label for="state" class="col-sm-2 col-form-label">State:</label>
                       <div class="col-sm-8">
                         <input type="" class="form-control" id="state" formControlName="state" required>
+                        <div *ngIf="getControl.state.touched && getControl.state.invalid" class="text-danger">
+                          <div *ngIf="getControl.state.errors">Full State is required.</div>
+                          <br>
+                  </div><br>
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="city" class="col-sm-2 col-form-label">City :</label>
                       <div class="col-sm-8">
                         <input type="text" class="form-control" id="city" formControlName="city" required>
+                        <div *ngIf="getControl.city.touched && getControl.city.invalid" class="text-danger">
+                          <div *ngIf="getControl.city.errors">Full City is required.</div>
+                          <br>
+                  </div><br>
                       </div>
                     </div>
 
@@ -45,12 +65,16 @@
                           <option value="Deactive">Deactive</option>
           
                         </select>
+                        <div *ngIf="getControl.status.touched && getControl.status.invalid" class="text-danger">
+                          <div *ngIf="getControl.status.errors">Full Status is required.</div>
+                          <br>
+                  </div><br>
                       </div>
                     </div>
           
           
                     <div class="text-center">
-                      <button type="submit" class="btn btn-danger" (click)="addEmployee()">Submit</button>
+                      <button type="submit" class="btn btn-danger" [disabled]="addEmployeeForm.invalid"(click)="addEmployee()">Submit</button>
                     </div>
                   </form>
 

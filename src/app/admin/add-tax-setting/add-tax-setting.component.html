@@ -2,7 +2,10 @@
 <app-admin-nav></app-admin-nav>
 <h4 align="center">Add Insurance Setting</h4>
     <hr>
-    
+    <div *ngIf="message"   class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Success!</strong> new Insurance type being added.
+      <button (click)="removeMesssag()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
@@ -33,4 +36,3 @@
            
         </div>
     </div>
-<h2 align="center">{{responseMsg}}</h2>

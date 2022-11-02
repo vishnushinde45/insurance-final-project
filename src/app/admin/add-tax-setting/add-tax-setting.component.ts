@@ -12,7 +12,7 @@ export class AddTaxSettingComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+message:boolean=false;
 
   insuranceSettingForm=this.formBuilder.group({
     tax:new FormControl(),
@@ -24,10 +24,14 @@ export class AddTaxSettingComponent implements OnInit {
   addInsuranceSetting(){
      this.insuranceService.addInsuranceSettings(this.insuranceSettingForm.value).subscribe((res)=>{
          this.responseMsg=res;
+         this.message=true;
+         this.insuranceSettingForm.reset({ });
      },(err)=>{
       this.responseMsg=err;
      })
 
   }
-
+  removeMesssag(){
+    this.message=false;
+  }
 }
