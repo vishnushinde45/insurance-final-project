@@ -13,7 +13,7 @@ export class CustomerLoginComponent implements OnInit {
   constructor(private formBuilder:FormBuilder,private customerService:CustomerService,private router:Router) { }
 
   customerLoginDetails=this.formBuilder.group({
-    username:new FormControl("",[Validators.required,Validators.minLength(5),Validators.pattern('^[a-zA-z]+$')]),
+    username:new FormControl("",[Validators.required,Validators.minLength(5),Validators.pattern('^[a-zA-z0-9]+$')]),
     password:new FormControl("",[Validators.required,Validators.minLength(5),Validators.pattern('^[a-zA-Z0-9]+$')]),
     
   });

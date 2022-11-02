@@ -110,6 +110,7 @@
                     <br>
             </div><br>
         </div>
+        </div>
 
         <div class="row mb-3">
             <label for="inputRelation" class="col-sm-2 col-form-label">Nominee Relation:</label>
@@ -119,6 +120,7 @@
                     <div *ngIf="getControl.fullName.errors">Nominee Relation is required.</div>
                     <br>
             </div><br>
+        </div>
         </div>
         <div class="text-center">
             <button type="submit" [disabled]="addCustomerForm.invalid" (click)="addCustomer()"class="btn btn-danger" (click)="addCustomer()" >Submit</button>

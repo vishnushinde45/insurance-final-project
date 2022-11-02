@@ -19,7 +19,7 @@
                     <input type="text" class="form-control" placeholder="Username" aria-label="Username"
                         formControlName="username" required>
                         <div *ngIf="getControl.username.touched && getControl.username.invalid" class="text-danger">
-                            <div *ngIf="getControl.username.errors">Username length must be of lenght more than 4 and can't contain numbers.</div>
+                            <div *ngIf="getControl.username.errors">Username length must be of lenght more than 4.</div>
                             <br>
                     </div>
 

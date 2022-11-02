@@ -31,6 +31,7 @@ import { AgentNavComponent } from './agent/agent-nav/agent-nav.component';
 import { AgentLoginComponent } from './agent/agent-login/agent-login.component';
 import { AgentDashboardComponent } from './agent/agent-dashboard/agent-dashboard.component';
 import { AddCustomerComponent } from './agent/add-customer/add-customer.component';
+import { ViewInsurancePlansComponent } from './customer/view-insurance-plans/view-insurance-plans.component';
 
 
 
@@ -62,6 +63,7 @@ import { AddCustomerComponent } from './agent/add-customer/add-customer.componen
     AgentLoginComponent,
     AgentDashboardComponent,
     AddCustomerComponent,
+    ViewInsurancePlansComponent,
    
   ],
   imports: [

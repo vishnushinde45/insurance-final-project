@@ -18,6 +18,7 @@ import { AddTaxSettingComponent } from './admin/add-tax-setting/add-tax-setting.
 import { AgentLoginComponent } from './agent/agent-login/agent-login.component';
 import { AgentDashboardComponent } from './agent/agent-dashboard/agent-dashboard.component';
 import { AddCustomerComponent } from './agent/add-customer/add-customer.component';
+import { ViewInsurancePlansComponent } from './customer/view-insurance-plans/view-insurance-plans.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
    {path:'agent/login',component:AgentLoginComponent},
    {path:'agent/dashboard',component:AgentDashboardComponent},
    {path:'agent/add-customer/:id',component:AddCustomerComponent},
+   {path:'customer/view-insurance-plans',component:ViewInsurancePlansComponent},
   {path:'**',component:PageNotFoundComponent}
 ];
 

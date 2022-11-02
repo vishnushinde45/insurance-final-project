@@ -1,0 +1,17 @@
+
+<app-customer-nav></app-customer-nav>
+
+
+  <select name="" id="" (change)="onChangeType($event)">
+    <option value={{plan.id}} *ngFor="let plan of insurancePlans">{{plan.insuranceScheme.insuranceType.insuranceType}} </option>
+  </select>
+
+  <select name="" id="" (change)="onChangeScheme($event)">
+    <option value={{plan.id}} *ngFor="let plan of insurancePlans">{{plan.insuranceScheme.insuranceSchemeName}} </option>
+  </select>
+
+
+ <div class="container" *ngIf="displayPlan">
+
+
+ </div>
