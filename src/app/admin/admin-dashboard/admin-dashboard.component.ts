@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { AdminService } from '../admin.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class AdminDashboardComponent implements OnInit {
 
   id!:number;
    Admin!:any;
-
+   
   constructor(private activatedRoute:ActivatedRoute,private adminService:AdminService) { }
 
   ngOnInit(): void {
@@ -28,6 +29,8 @@ export class AdminDashboardComponent implements OnInit {
     console.log(err);
     
   })
+
+
   }
 
 }

@@ -1,0 +1,65 @@
+<app-admin-nav></app-admin-nav>
+<h4 align="center">Add New Scheme</h4>
+    <hr>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <form autocomplete="off" [formGroup]="addSchemeForm">
+                    <div class="row mb-3">
+                        <label for="insuranceType" class="col-sm-2 col-form-label">Insurance Type :</label>
+                        <div class="col-sm-8">
+                          <select name="" id="" formControlName="insuranceTypeId">
+                           
+                               <option *ngFor="let insurance of insuranceTypes" [ngValue]="insurance.id">{{insurance.insuranceType}}</option>
+                           
+                          </select>
+                        </div>
+                      </div>
+                    <div class="row mb-3">
+                      <label for="insuranceSchemeName" class="col-sm-2 col-form-label">Insurance Scheme Name :</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="empName" formControlName="insuranceSchemeName" required>
+                      </div>
+                    </div>
+          
+                    <div class="row mb-3">
+                      <label for="commisionForNewRegistration" class="col-sm-2 col-form-label">Commision For New Registration :</label>
+                      <div class="col-sm-8">
+                        <input type="number" class="form-control" id="commisionForNewRegistration" formControlName="commisionForNewRegistration" required>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="commisionForInstallment" class="col-sm-2 col-form-label">Commision For Installment:</label>
+                        <div class="col-sm-8">
+                          <input type="number" class="form-control" id="commisionForInstallment" formControlName="commisionForInstallment" required>
+                        </div>
+                      </div>
+                      
+                      Description :<angular-editor [placeholder]="'Enter text here...'" [config]="config" [(ngModel)]="htmlContent" formControlName="description" ></angular-editor>
+          
+                      <br>
+                    <div class="row mb-3">
+                      <label for="status" class="col-sm-2 col-form-label">Status :</label>
+                      <div class="col-sm-8">
+                        <select class="form-control" id="status" formControlName="status" required>
+                          <option>Select Status:</option>
+                          <option value="Active">Active</option>
+                          <option value="Deactive">Deactive</option>
+          
+                        </select>
+                      </div>
+                    </div>
+          
+          
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-danger" (click)="addScheme()">Submit</button>
+                    </div>
+                  </form>
+
+            </div>
+           
+        </div>
+    </div>

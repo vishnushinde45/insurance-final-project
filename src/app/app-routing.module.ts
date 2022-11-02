@@ -8,6 +8,16 @@ import { PageNotFoundComponent } from './pageNotFound/page-not-found/page-not-fo
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { ViewCustomersComponent } from './admin/view-customers/view-customers.component';
+import { AddEmployeeComponent } from './admin/add-employee/add-employee.component';
+import { ViewEmployeesComponent } from './admin/view-employees/view-employees.component';
+import { AddInsuranceTypeComponent } from './admin/add-insurance-type/add-insurance-type.component';
+import { ViewInsuranceSchemesComponent } from './admin/view-insurance-schemes/view-insurance-schemes.component';
+import { AddInsuranceSchemeComponent } from './admin/add-insurance-scheme/add-insurance-scheme.component';
+import { AddInsurancePlanComponent } from './admin/add-insurance-plan/add-insurance-plan.component';
+import { AddTaxSettingComponent } from './admin/add-tax-setting/add-tax-setting.component';
+import { AgentLoginComponent } from './agent/agent-login/agent-login.component';
+import { AgentDashboardComponent } from './agent/agent-dashboard/agent-dashboard.component';
+import { AddCustomerComponent } from './agent/add-customer/add-customer.component';
 
 
 const routes: Routes = [
@@ -18,6 +28,16 @@ const routes: Routes = [
   {path:'admin/login',component:AdminLoginComponent},
   {path:'admin/dashboard',component:AdminDashboardComponent},
   {path:'admin/view-customers',component:ViewCustomersComponent},
+  {path:'admin/add-employee',component:AddEmployeeComponent},
+  {path:'admin/view-employees',component:ViewEmployeesComponent},
+  {path:'admin/add-insurance-type',component:AddInsuranceTypeComponent},
+   {path:'admin/view-insurance-schemes',component:ViewInsuranceSchemesComponent},
+   {path:'admin/add-insurance-scheme',component:AddInsuranceSchemeComponent},
+   {path:'admin/add-insurance-plan',component:AddInsurancePlanComponent},
+   {path:'admin/add-insurance-setting',component:AddTaxSettingComponent},
+   {path:'agent/login',component:AgentLoginComponent},
+   {path:'agent/dashboard',component:AgentDashboardComponent},
+   {path:'agent/add-customer/:id',component:AddCustomerComponent},
   {path:'**',component:PageNotFoundComponent}
 ];
 

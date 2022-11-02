@@ -1,0 +1,36 @@
+
+<app-admin-nav></app-admin-nav>
+<h4 align="center">Add Insurance Setting</h4>
+    <hr>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <form autocomplete="off" [formGroup]="insuranceSettingForm">
+                    <div class="row mb-3">
+                      <label for="tax" class="col-sm-2 col-form-label">Tax Percentage</label>
+                      <div class="col-sm-8">
+                        <input type="number" class="form-control" id="tax" formControlName="tax" required>
+                      </div>
+                    </div>
+          
+                    <div class="row mb-3">
+                      <label for="claimDed" class="col-sm-2 col-form-label">Claim Deduction Percentage:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="claimDed" formControlName="claimDeduction" required>
+                      </div>
+                    </div>
+        
+          
+          
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-danger" (click)="addInsuranceSetting()">Submit</button>
+                    </div>
+                  </form>
+
+            </div>
+           
+        </div>
+    </div>
+<h2 align="center">{{responseMsg}}</h2>

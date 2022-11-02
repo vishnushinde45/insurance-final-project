@@ -27,4 +27,9 @@ export class CustomerService {
   getCustomers(){
     return this.http.get('http://localhost:8080/api/customers/');
   }
+ 
+  addCustomerByAgent(data:object,id:number){
+    return this.http.post('http://localhost:8080/api/customers/'+id,data);
+  }
+
 }
