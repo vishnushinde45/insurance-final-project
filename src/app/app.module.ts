@@ -35,7 +35,6 @@ import { ViewInsurancePlansComponent } from './customer/view-insurance-plans/vie
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
