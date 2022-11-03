@@ -40,7 +40,6 @@ export class AddInsuranceSchemeComponent implements OnInit {
     minHeight: '5rem',
     placeholder: 'Enter text here...',
     translate: 'no',
-    defaultParagraphSeparator: 'p',
     defaultFontName: 'Arial',
    
   };

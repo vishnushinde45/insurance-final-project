@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
 
 
 @Injectable({
@@ -9,7 +10,14 @@ import { Router } from '@angular/router';
 export class CustomerService {
 
   constructor(private http:HttpClient,private router:Router) { }
-  
+  customerId:number;
+  setCustomerId(id:number){
+    this.customerId=id;
+  }
+  getCustomerId(){
+    return this.customerId;
+  }
+
   addCustomer(data:object){
     this.http.post('http://localhost:8080/api/customers',data).subscribe((res)=>{
       console.log(res);
@@ -31,5 +39,7 @@ export class CustomerService {
   addCustomerByAgent(data:object,id:number){
     return this.http.post('http://localhost:8080/api/customers/'+id,data);
   }
+
+
 
 }

@@ -19,6 +19,7 @@ import { AgentLoginComponent } from './agent/agent-login/agent-login.component';
 import { AgentDashboardComponent } from './agent/agent-dashboard/agent-dashboard.component';
 import { AddCustomerComponent } from './agent/add-customer/add-customer.component';
 import { ViewInsurancePlansComponent } from './customer/view-insurance-plans/view-insurance-plans.component';
+import { ViewMorePlanComponent } from './customer/view-more-plan/view-more-plan.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
    {path:'agent/dashboard',component:AgentDashboardComponent},
    {path:'agent/add-customer/:id',component:AddCustomerComponent},
    {path:'customer/view-insurance-plans',component:ViewInsurancePlansComponent},
+   {path:'customer/view-more-plan',component:ViewMorePlanComponent},
   {path:'**',component:PageNotFoundComponent}
 ];
 
