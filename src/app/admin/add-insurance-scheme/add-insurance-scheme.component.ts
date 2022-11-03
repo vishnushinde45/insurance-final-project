@@ -48,11 +48,15 @@ export class AddInsuranceSchemeComponent implements OnInit {
       console.log(res);
       this.message=true;
      this.addSchemeForm.reset({ });
+     
+     
     })
      
       
   }
-
+  get getControl(){
+    return this.addSchemeForm.controls;
+  }
   removeMesssag(){
     this.message=false;
   }

@@ -23,32 +23,39 @@ export class AddCustomerComponent implements OnInit {
      
       });
   }
-
+message:boolean=false;
   
   addCustomerForm=this.formBuilder.group({
-    fullName:new FormControl(),
-    username:new FormControl(),
-    emailId:new FormControl(),
-    password:new FormControl(),
-    dateOfBirth:new FormControl(),
-    address:new FormControl(),
-    state:new FormControl(),
-    city:new FormControl(),
-    pincode:new FormControl(),
-    nomineeName:new FormControl(),
-    mobileNo:new FormControl(),
-    nomineeRelation:new FormControl(),
+    fullName:new FormControl('',Validators.required),
+    username:new FormControl('',Validators.required),
+    emailId:new FormControl('',Validators.required),
+    password:new FormControl('',Validators.required),
+    dateOfBirth:new FormControl('',Validators.required),
+    address:new FormControl('',Validators.required),
+    state:new FormControl('',Validators.required),
+    city:new FormControl('',Validators.required),
+    pincode:new FormControl('',Validators.required),
+    nomineeName:new FormControl('',Validators.required),
+    mobileNo:new FormControl('',Validators.required),
+    nomineeRelation:new FormControl('',Validators.required),
   });
 
   
   addCustomer(){
      this.customerService.addCustomerByAgent(this.addCustomerForm.value,this.id).subscribe((res)=>{
       console.log(res);
+      this.message=true;
       
      },(err)=>{
       console.log(err);
       
      });
+  }
+  get getControl(){
+    return this.addCustomerForm.controls;
+  }
+  removeMesssag(){
+    this.message=false;
   }
 
 }
