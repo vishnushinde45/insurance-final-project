@@ -1,0 +1,165 @@
+
+<app-customer-nav></app-customer-nav>
+<hr>
+<div class="container">
+    <h2 align="center">{{insurancePlan.insuranceScheme.insuranceType.insuranceType}}</h2>
+    <hr>
+    <h4>{{insurancePlan.insuranceScheme.insuranceSchemeName}}</h4>
+    <div [innerHTML]="insurancePlan.insuranceScheme.description">
+
+    </div>
+     
+    <br>
+    <br>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th>Minimum Age</th>
+            <th>Maximum Age</th>
+            <th>Minimum Policy Term</th>
+            <th>Maximum Policy Term</th>
+            <th>Minimum Investment Amount</th>
+            <th>Maximum Investment Amount</th>
+            <th>Profit Ratio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>{{insurancePlan.minimumAge}}</th>
+            <th>{{insurancePlan.maximumAge}}</th>
+            <th>{{insurancePlan.minimumPolicyTerm}}</th>
+            <th>{{insurancePlan.maximumPolicyTerm}}</th>
+            <th>{{insurancePlan.minimumInvestment}}</th>
+            <th>{{insurancePlan.maximumInvestment}}</th>
+            <th>{{insurancePlan.profitRatio}}</th>
+
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+
+      <h4 align="center">Interest Calculator</h4>
+      <hr>
+
+      <div class="interestCalculator">
+          Policy Term (No of Years) :<input type="number" name="" id="" [(ngModel)]="policyTerm">
+          Total Investment INR:<input type="number" name="" id="" [(ngModel)]="investedAmount">
+          Premium Type <select name="" id="" [(ngModel)]="premiumType">
+                            <option value=3>3 Months</option>
+                            <option value=6>6 Months</option>
+                            <option value=12>12 Months</option>
+                          </select>
+          
+                          <input type="submit" value="Calculate" (click)="onClickCalculateInterest()">
+      </div>
+
+      <div align="center" class="interestResultBox" *ngIf="showInterest">
+               Total Investment:{{investedAmount}} <br>
+               Installment Amount : {{installmentAmount}} <br>
+               Interest : {{compoundInterest}} <br>
+           
+
+              <button type="button" class="btn btn-danger btn-lg"  (click)="onClickBuy()" >
+               Buy Policy
+                </button>
+              
+
+      </div>
+</div>
+
+
+
+
+        <hr>
+        <div class="container" *ngIf="confirmForm">
+          <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-10">
+                    <form autocomplete="off" [formGroup]="BuyPolicyForm" >
+                      <div class="row mb-3">
+                          <label for="insuranceType" class="col-sm-2 col-form-label">Insurance Type :</label>
+                          <div class="col-sm-8">
+                            <select name="" id="" formControlName="insuranceTypeName">
+                            
+                                <option selected>{{insurancePlan.insuranceScheme.insuranceType.insuranceType}}</option>
+                            
+                            </select>
+                          </div>
+                        </div>
+                      <div class="row mb-3">
+                        <label for="insuranceSchemeName" class="col-sm-2 col-form-label">Insurance Scheme Name :</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="empName" formControlName="insuranceSchemeName" value="{{insuranceSchemeName}}" [(ngModel)]="insuranceSchemeName" required>
+                        </div>
+                      </div>
+
+                    
+
+                      <div class="row mb-3">
+                          <label for="policyTerm" class="col-sm-2 col-form-label">Policy term (No of Years) :</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" id="policyTerm" formControlName="policyTerm" [(ngModel)]="policyTerm" value="{{policyTerm}}"  required>
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <label for="totalInvestment" class="col-sm-2 col-form-label">Toatl Investment :</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" id="totalInvestment" value="{{investedAmount}}" [(ngModel)]="investedAmount" formControlName="investedAmount"  required>
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <label for="premiumType" class="col-sm-2 col-form-label">Premium Type :</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" id="premiumType" value="{{premiumType}}" [(ngModel)]="premiumType" formControlName="premiumType"  required>
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <label for="intallment" class="col-sm-2 col-form-label">Installment Amount :</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" id="intallment"  value="{{installmentAmount}}" [(ngModel)]="installmentAmount" formControlName="installmentAmount"  required>
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <label for="interest" class="col-sm-2 col-form-label">Interest Amount :</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" id="interest" value="{{interestAmount}}" [(ngModel)]="interestAmount" formControlName="interestAmount" required>
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <label for="profitRatio" class="col-sm-2 col-form-label">Interest Amount :</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" id="profitRatio" value="{{profitRatio}}" [(ngModel)]="profitRatio" formControlName="profitRatio" required>
+                          </div>
+                        </div>
+
+                        <div class="row mb-3">
+                          <label for="totalAmount" class="col-sm-2 col-form-label">Total Amount :</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" id="totalAmount" value="{{compoundInterest+investedAmount}}" required>
+                          </div>
+                        </div>
+
+
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-danger" (click)="buyPolicy()">Click here to proceed</button>
+                      </div>
+                    </form>
+      </div>
+           
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+

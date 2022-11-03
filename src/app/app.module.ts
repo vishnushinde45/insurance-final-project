@@ -32,6 +32,8 @@ import { AgentLoginComponent } from './agent/agent-login/agent-login.component';
 import { AgentDashboardComponent } from './agent/agent-dashboard/agent-dashboard.component';
 import { AddCustomerComponent } from './agent/add-customer/add-customer.component';
 import { ViewInsurancePlansComponent } from './customer/view-insurance-plans/view-insurance-plans.component';
+import { ViewMorePlanComponent } from './customer/view-more-plan/view-more-plan.component';
+import { CustomerService } from './customer/customer-service.service';
 
 
 
@@ -64,6 +66,7 @@ import { ViewInsurancePlansComponent } from './customer/view-insurance-plans/vie
     AgentDashboardComponent,
     AddCustomerComponent,
     ViewInsurancePlansComponent,
+    ViewMorePlanComponent,
    
   ],
   imports: [
@@ -75,7 +78,7 @@ import { ViewInsurancePlansComponent } from './customer/view-insurance-plans/vie
     HttpClientModule,
     AngularEditorModule
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
