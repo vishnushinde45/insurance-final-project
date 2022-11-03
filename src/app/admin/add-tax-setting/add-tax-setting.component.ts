@@ -15,8 +15,8 @@ export class AddTaxSettingComponent implements OnInit {
 message:boolean=false;
 
   insuranceSettingForm=this.formBuilder.group({
-    tax:new FormControl(),
-    claimDeduction:new FormControl()
+    tax:new FormControl("",[Validators.required, Validators.max(20)]),
+    claimDeduction:new FormControl("",[Validators.required])
    
   });
 
@@ -31,7 +31,12 @@ message:boolean=false;
      })
 
   }
+
+
   removeMesssag(){
     this.message=false;
+  }
+  get getControl(){
+    return this.insuranceSettingForm.controls;
   }
 }
