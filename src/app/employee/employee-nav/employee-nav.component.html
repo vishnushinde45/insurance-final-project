@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/agent/dashboard'">DASHBOARD</a>
+            <a class="nav-link" href="employee_dashboard.html">DASHBOARD</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -27,22 +27,28 @@
               ACCOUNT
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="agent_profile.html">Profile</a></li>
-              <li><a class="dropdown-item" href="agent_changePassword.html">Change Password</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Change Password</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              AGENT
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" [routerLink]="'/employee/add-agent'">ADD AGENT</a></li>
+              <li><a class="dropdown-item" href="#">VIEW AGENTS</a></li>
             </ul>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/agent/send-mail'">MARKETING</a>
-          </li>
-
+         
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               INSURANCE
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">View Customers</a></li>
-              <li><a class="dropdown-item" href="View-insurance-Account-detail.html">Insurance Account</a></li>
+                <li><a class="dropdown-item" href="View-insurance-plans.html">View Insurance Plan</a></li>
               <li><a class="dropdown-item" href="View-Policy-Payment.html">View Policy Payment</a></li>
               <li><a class="dropdown-item" href="View-policy-Claim-Records.html">View Policy Claim</a></li>
             </ul>
@@ -52,8 +58,8 @@
               COMMISION
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" [routerLink]="'/agent/view-commision'">VIEW COMMISSION</a></li>
-              <li><a class="dropdown-item" href="#">WITHDRAW AMOUNT</a></li>
+              <li><a class="dropdown-item" href="View-Commision-Records.html">VIEW COMMISSION</a></li>
+              <li><a class="dropdown-item" href="View-Commision-Withdrawls.html">VIEW COMMISSION WITHDRAWL</a></li>
         
             </ul>
           </li>
@@ -61,7 +67,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link" (click)="logOut()">LOG OUT</a>
+            <a class="nav-link" href="#">LOG OUT</a>
           </li>
           
         </ul>

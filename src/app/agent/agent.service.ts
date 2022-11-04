@@ -15,4 +15,8 @@ export class AgentService {
   getAgent(id:number){
     return this.http.get('http://localhost:8080/api/agents/'+id);
   }
+
+  addAgentByEmployee(data:object,employeeId:number){
+    return this.http.post('http://localhost:8080/api/agents/add-agent/'+employeeId,data);
+  }
 }

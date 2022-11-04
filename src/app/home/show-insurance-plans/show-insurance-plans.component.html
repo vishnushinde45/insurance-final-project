@@ -1,0 +1,26 @@
+
+<app-home-nav></app-home-nav>
+<hr>
+<h4 align="center">Insurance Plans</h4> <hr>
+
+    <div class="container">
+       <table class="table table-bordered">
+           <thead class="thead-light">
+             <tr>
+               <th scope="col">#</th>
+               <th scope="col">Insurance Type</th>
+               <th scope="col">Insurance Scheme Name</th>
+               <th scope="col">Action</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr *ngFor="let plan of insurancePlans,let i=index">
+               <th scope="row">{{i+1}}</th>
+               <td>{{plan.insuranceScheme.insuranceType.insuranceType}}</td>
+               <td>{{plan.insuranceScheme.insuranceSchemeName}}</td>
+               <td><button class="btn btn-info" (click)="onViewMoreClick(plan.id)">View more</button></td>
+             </tr>
+           </tbody>
+         </table>
+    </div>
+

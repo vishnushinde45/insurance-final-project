@@ -80,7 +80,7 @@
 
     <div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary">
         <p><b>Payment Detail</b></p>
-        <form autocomplete="off">
+       
             
             <table class="table table-striped">
                 <thead>
@@ -89,6 +89,7 @@
                         <th>Installment Date</th>
                         <th>Installment Amount</th>
                         <th> Payment Status</th>
+                        <th>Action</th>
                         <th> Receipt</th>
                         </tr>
                 </thead>
@@ -98,6 +99,10 @@
                         <td>{{installment.date}} </td>
                         <td>₹ {{installment.installmentAmount}}</td>
                         <td>{{installment.status}}</td>
+                        <td *ngIf="installment.status=='PENDING'; else elseBlock"><a href="#">PAY</a></td>
+                        <ng-template #elseBlock>
+                            <td>--</td>
+                          </ng-template>
                         <td><a href="#">Download</a></td>
             
                     </tr>
@@ -108,6 +113,6 @@
             </table>
 
 
-        </form>
+ 
     </div>
     <div>
