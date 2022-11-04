@@ -38,12 +38,16 @@ import { CustomerInsuranceAccountComponent } from './customer/customer-insurance
 import { CustomerViewMoreInsuranceAccountComponent } from './customer/customer-view-more-insurance-account/customer-view-more-insurance-account.component';
 import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
 import { ViewCommisionComponent } from './agent/view-commision/view-commision.component';
+
 import { EmployeeDashboardComponent } from './employee/employee-dashboard/employee-dashboard.component';
 import { EmployeeNavComponent } from './employee/employee-nav/employee-nav.component';
 import { ShowInsurancePlansComponent } from './home/show-insurance-plans/show-insurance-plans.component';
 import { HomeViewMorePlanComponent } from './home/home-view-more-plan/home-view-more-plan.component';
 import { AddAgentComponent } from './employee/add-agent/add-agent.component';
 import { SendMailtoCustomerComponent } from './agent/send-mailto-customer/send-mailto-customer.component';
+
+import { AboutComponent } from './home/about/about.component';
+
 
 
 
@@ -80,12 +84,16 @@ import { SendMailtoCustomerComponent } from './agent/send-mailto-customer/send-m
     CustomerViewMoreInsuranceAccountComponent,
     EmployeeLoginComponent,
     ViewCommisionComponent,
+
     EmployeeDashboardComponent,
     EmployeeNavComponent,
     ShowInsurancePlansComponent,
     HomeViewMorePlanComponent,
     AddAgentComponent,
     SendMailtoCustomerComponent,
+
+    AboutComponent,
+
    
   ],
   imports: [
