@@ -11,7 +11,10 @@ export class AddEmployeeComponent implements OnInit {
 
   constructor(private formBuilder:FormBuilder,private employeeService:EmployeeService) { }
 
+  adminId:any;
   ngOnInit(): void {
+    this.adminId=sessionStorage.getItem('adminId');
+
   }
 message:boolean=false;
   addEmployeeForm=this.formBuilder.group({
@@ -20,6 +23,7 @@ message:boolean=false;
     state:new FormControl("",Validators.required),
     city:new FormControl("",Validators.required),
     status:new FormControl("",Validators.required),
+    emailId:new FormControl()
   });
 
   Employee:any;

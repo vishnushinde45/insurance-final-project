@@ -25,7 +25,8 @@ export class EmployeeLoginComponent implements OnInit {
   onLoginClick(){
     this.employeeService.employeeLogin(this.employeeLoginDetails.value).subscribe((res)=>{
       this.employeeData=res;
-      this.router.navigate(['admin/dashboard'],{ queryParams: { 'id': this.employeeData.id } })
+      this.router.navigate(['employee/dashboard'],{ queryParams: { 'id': this.employeeData.id } })
+      sessionStorage.setItem('employeeId',this.employeeData.id )
       sessionStorage.setItem('username',this.employeeData.username);
    },((err:any)=>{
               console.log(err);

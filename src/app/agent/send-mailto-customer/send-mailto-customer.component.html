@@ -1,0 +1,30 @@
+<app-agent-nav></app-agent-nav>
+<hr>
+    <h4 align="center">Send Mail</h4>
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                  <form [formGroup]="emailForm">
+                    <div class="mb-3">
+                        <label for="emailID" class="form-label">Email ID :</label>
+                        <input type="email" class="form-control" id="emailID" placeholder="name@example.com" formControlName="emailId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject :</label>
+                        <input type="text" class="form-control" id="subject" formControlName="subject">
+                    </div>
+                      <div class="mb-3">
+                        <label for="message" class="form-label">Message :</label>
+                        <textarea class="form-control" id="message" rows="3" formControlName="message"></textarea>
+                      </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-danger" (click)="sendMail()">Send Mail</button>
+                      </div>
+                    </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>

@@ -1,0 +1,71 @@
+<app-home-nav></app-home-nav>
+<hr>
+<div class="container">
+    <h2 align="center">{{insurancePlan.insuranceScheme.insuranceType.insuranceType}}</h2>
+    <hr>
+    <h4>{{insurancePlan.insuranceScheme.insuranceSchemeName}}</h4>
+    <div [innerHTML]="insurancePlan.insuranceScheme.description">
+
+    </div>
+     
+    <br>
+    <br>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th>Minimum Age</th>
+            <th>Maximum Age</th>
+            <th>Minimum Policy Term</th>
+            <th>Maximum Policy Term</th>
+            <th>Minimum Investment Amount</th>
+            <th>Maximum Investment Amount</th>
+            <th>Profit Ratio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>{{insurancePlan.minimumAge}}</th>
+            <th>{{insurancePlan.maximumAge}}</th>
+            <th>{{insurancePlan.minimumPolicyTerm}}</th>
+            <th>{{insurancePlan.maximumPolicyTerm}}</th>
+            <th>{{insurancePlan.minimumInvestment}}</th>
+            <th>{{insurancePlan.maximumInvestment}}</th>
+            <th>{{insurancePlan.profitRatio}}</th>
+
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+
+      <h4 align="center">Interest Calculator</h4>
+      <hr>
+
+      <div class="interestCalculator">
+          Policy Term (No of Years) :<input type="number" name="" id="" [(ngModel)]="policyTerm">
+          Total Investment INR:<input type="number" name="" id="" [(ngModel)]="investedAmount">
+          Premium Type <select name="" id="" [(ngModel)]="premiumType">
+                            <option value=3>3 Months</option>
+                            <option value=6>6 Months</option>
+                            <option value=12>12 Months</option>
+                          </select>
+          
+                          <input type="submit" value="Calculate" (click)="onClickCalculateInterest()">
+      </div>
+
+      <div align="center" class="interestResultBox" *ngIf="showInterest">
+               Total Investment:{{investedAmount}} <br>
+               Installment Amount : {{installmentAmount}} <br>
+               Interest : {{compoundInterest}} <br>
+ 
+               <br>
+               <h4> <a [routerLink]="'/customer/login'"> <i>Login to buy policy</i> </a></h4>
+           
+
+              
+
+      </div>
+</div>
+
+
+
+

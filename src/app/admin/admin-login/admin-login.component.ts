@@ -28,7 +28,7 @@ export class AdminLoginComponent implements OnInit {
    this.adminService.adminLogin(this.adminLoginDetails.value).subscribe((res)=>{
       this.responseData=res;
       this.router.navigate(['admin/dashboard'],{ queryParams: { 'id': this.responseData.id } })
-      sessionStorage.setItem('username',this.responseData.username);
+      sessionStorage.setItem('adminId',this.responseData.id);
    },((err:any)=>{
               console.log(err);
               
