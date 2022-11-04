@@ -10,13 +10,13 @@ import { CustomerService } from '../customer-service.service';
   styleUrls: ['./customer-registration.component.css']
 })
 export class CustomerRegistrationComponent implements OnInit {
-  formSubmitted:boolean= false;
 
   constructor(private formBuilder:FormBuilder,private customerService:CustomerService) { }
 
   ngOnInit(): void {
     const formSubmitted = false;
   }
+message:boolean=false;
 
   addCustomerForm=this.formBuilder.group({
     fullName:new FormControl("",[Validators.required]),
@@ -36,9 +36,13 @@ export class CustomerRegistrationComponent implements OnInit {
   
   addCustomer(){
      this.customerService.addCustomer(this.addCustomerForm.value);
-     this.formSubmitted = true;
+     this.message=true;
+     this.addCustomerForm.reset({ });
   }
   get getControl(){
     return this.addCustomerForm.controls;
+  }
+  removeMesssag(){
+    this.message=false;
   }
 }

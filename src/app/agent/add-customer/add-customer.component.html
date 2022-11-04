@@ -1,29 +1,49 @@
 <h2 class="text-center">Customer Registration</h2>
 <hr>
+<div *ngIf="message"  class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Customer being added.
+    <button (click)="removeMesssag()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
 <div style="margin-top: 2%; margin-bottom: 5px;" class="container border border-primary">
     <form [formGroup]="addCustomerForm">
         <div class="row mb-3">
             <label for="inputName" class="col-sm-2 col-form-label">Customer Name:</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="inputName" formControlName="fullName" required>
+                <div *ngIf="getControl.fullName.touched && getControl.fullName.invalid" class="text-danger">
+                    <div *ngIf="getControl.fullName.errors">Name is required.</div>
+                    <br>
+            </div><br>
             </div>
         </div>
         <div class="row mb-3">
             <label for="inputUsername" class="col-sm-2 col-form-label">Username :</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="inputUsername" formControlName="username" required>
+                <div *ngIf="getControl.username.touched && getControl.username.invalid" class="text-danger">
+                    <div *ngIf="getControl.username.errors">Username is required.</div>
+                    <br>
+            </div><br>
             </div>
         </div>
         <div class="row mb-3">
             <label for="inputPassword" class="col-sm-2 col-form-label">Password :</label>
             <div class="col-sm-8">
                 <input type="password" class="form-control" id="inputPassword" formControlName="password" required>
+                <div *ngIf="getControl.password.touched && getControl.password.invalid" class="text-danger">
+                    <div *ngIf="getControl.password.errors">Password is required.</div>
+                    <br>
+            </div><br>
             </div>
         </div>
         <div class="row mb-3">
             <label for="inputDOB" class="col-sm-2 col-form-label">Date of Birth:</label>
             <div class="col-sm-8">
                 <input type="date" class="form-control" id="inputDOB" formControlName="dateOfBirth" required>
+                <div *ngIf="getControl.dateOfBirth.touched && getControl.dateOfBirth.invalid" class="text-danger">
+                    <div *ngIf="getControl.dateOfBirth.errors">Date of birth is required.</div>
+                    <br>
+            </div><br>
             </div>
         </div>
 
@@ -31,6 +51,10 @@
             <label for="inputAddress" class="col-sm-2 col-form-label" autocomplete="off">Address:</label>
             <div class="col-sm-8">
                 <input type="lo" class="form-control" id="inputAddress" formControlName="address" required>
+                <div *ngIf="getControl.address.touched && getControl.address.invalid" class="text-danger">
+                    <div *ngIf="getControl.address.errors">Address is required.</div>
+                    <br>
+            </div><br>
             </div>
         </div>
 
@@ -38,6 +62,10 @@
             <label for="inputEmail" class="col-sm-2 col-form-label">Email ID:</label>
             <div class="col-sm-8">
                 <input type="email" class="form-control" id="inputEmail" formControlName="emailId" required>
+                <div *ngIf="getControl.emailId.touched && getControl.emailId.invalid" class="text-danger">
+                    <div *ngIf="getControl.emailId.errors">Email is required.</div>
+                    <br>
+            </div><br>
             </div>
         </div>
 
@@ -45,6 +73,10 @@
             <label for="inputState" class="col-sm-2 col-form-label">State:</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="inputState" formControlName="state" required>
+                <div *ngIf="getControl.state.touched && getControl.state.invalid" class="text-danger">
+                    <div *ngIf="getControl.state.errors">State is required.</div>
+                    <br>
+            </div><br>
             </div>
         </div>
 
@@ -52,7 +84,10 @@
             <label for="inputCity" class="col-sm-2 col-form-label">City:</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="inputCity" formControlName="city" required>
-                
+                <div *ngIf="getControl.city.touched && getControl.city.invalid" class="text-danger">
+                    <div *ngIf="getControl.city.errors">City is required.</div>
+                    <br>
+            </div><br>
             </div>
         </div>
 
@@ -61,6 +96,10 @@
             <label for="inputPin" class="col-sm-2 col-form-label">Pincode:</label>
             <div class="col-sm-8">
                 <input type="number" class="form-control" id="inputPin" formControlName="pincode" required>
+                <div *ngIf="getControl.pincode.touched && getControl.pincode.invalid" class="text-danger">
+                    <div *ngIf="getControl.pincode.errors">Pincode is required.</div>
+                    <br>
+            </div><br>
             </div>
         </div>
 

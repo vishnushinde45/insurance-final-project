@@ -13,13 +13,13 @@ export class AddEmployeeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+message:boolean=false;
   addEmployeeForm=this.formBuilder.group({
-    fullName:new FormControl(),
-    username:new FormControl(),
-    state:new FormControl(),
-    city:new FormControl(),
-    status:new FormControl(),
+    fullName:new FormControl("",Validators.required),
+    username:new FormControl("",Validators.required),
+    state:new FormControl("",Validators.required),
+    city:new FormControl("",Validators.required),
+    status:new FormControl("",Validators.required),
   });
 
   Employee:any;
@@ -29,12 +29,18 @@ export class AddEmployeeComponent implements OnInit {
      this.employeeService.addEmployee(this.addEmployeeForm.value).subscribe((res)=>{
       this.Employee=res;
       console.log(this.Employee);
-      
+      this.message=true;
+      this.addEmployeeForm.reset({ });
      },(err)=>{
       this.errorMessage=err;
       console.log(err);
       
      });
   }
-
+  get getControl(){
+    return this.addEmployeeForm.controls;
+  }
+  removeMesssag(){
+    this.message=false;
+  }
 }
