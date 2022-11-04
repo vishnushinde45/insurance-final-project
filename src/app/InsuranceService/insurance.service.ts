@@ -45,4 +45,12 @@ export class InsuranceService {
   buyPolicy(data:object,customerId:number,schemeId:number){
         return this.http.post('http://localhost:8080/api/insurance/buy-policy/'+customerId+'/'+schemeId,data);
   }
+
+  getEnrolledPolicies(customerId:number){
+    return this.http.get('http://localhost:8080/api/enrolled-policies/'+customerId);
+  }
+
+  getEnrolledPolicyById(policyId:number){
+    return this.http.get('http://localhost:8080/api/enrolled-policy/'+policyId)
+  }
 }

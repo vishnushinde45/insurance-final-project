@@ -20,6 +20,10 @@ import { AgentDashboardComponent } from './agent/agent-dashboard/agent-dashboard
 import { AddCustomerComponent } from './agent/add-customer/add-customer.component';
 import { ViewInsurancePlansComponent } from './customer/view-insurance-plans/view-insurance-plans.component';
 import { ViewMorePlanComponent } from './customer/view-more-plan/view-more-plan.component';
+import { CustomerInsuranceAccountComponent } from './customer/customer-insurance-account/customer-insurance-account.component';
+import { CustomerViewMoreInsuranceAccountComponent } from './customer/customer-view-more-insurance-account/customer-view-more-insurance-account.component';
+import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
+import { ViewCommisionComponent } from './agent/view-commision/view-commision.component';
 
 
 const routes: Routes = [
@@ -42,6 +46,10 @@ const routes: Routes = [
    {path:'agent/add-customer/:id',component:AddCustomerComponent},
    {path:'customer/view-insurance-plans',component:ViewInsurancePlansComponent},
    {path:'customer/view-more-plan',component:ViewMorePlanComponent},
+   {path:'customer/view-insurance-account',component:CustomerInsuranceAccountComponent},
+   {path:'customer/view-more-insurance-account/:id',component:CustomerViewMoreInsuranceAccountComponent},
+   {path:'employee/login',component:EmployeeLoginComponent},
+   {path:'agent/view-commision',component:ViewCommisionComponent},
   {path:'**',component:PageNotFoundComponent}
 ];
 

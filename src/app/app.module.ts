@@ -34,6 +34,10 @@ import { AddCustomerComponent } from './agent/add-customer/add-customer.componen
 import { ViewInsurancePlansComponent } from './customer/view-insurance-plans/view-insurance-plans.component';
 import { ViewMorePlanComponent } from './customer/view-more-plan/view-more-plan.component';
 import { CustomerService } from './customer/customer-service.service';
+import { CustomerInsuranceAccountComponent } from './customer/customer-insurance-account/customer-insurance-account.component';
+import { CustomerViewMoreInsuranceAccountComponent } from './customer/customer-view-more-insurance-account/customer-view-more-insurance-account.component';
+import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
+import { ViewCommisionComponent } from './agent/view-commision/view-commision.component';
 
 
 
@@ -67,6 +71,10 @@ import { CustomerService } from './customer/customer-service.service';
     AddCustomerComponent,
     ViewInsurancePlansComponent,
     ViewMorePlanComponent,
+    CustomerInsuranceAccountComponent,
+    CustomerViewMoreInsuranceAccountComponent,
+    EmployeeLoginComponent,
+    ViewCommisionComponent,
    
   ],
   imports: [

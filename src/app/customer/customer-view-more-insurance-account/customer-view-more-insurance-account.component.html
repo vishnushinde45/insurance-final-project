@@ -1,0 +1,113 @@
+<app-customer-nav></app-customer-nav>
+<hr>
+<h3 class="text-center">Insurance Account detail</h3><hr>
+
+    <div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary">
+        <p><b>Customer Detail</b></p>
+            <table class="table table-striped">
+                <thead>
+                    <tr> 
+                        <th>Customer Name</th>
+                        <th> Customer Address</th>
+                        <th> Email-ID</th>
+                        <th>Customer Mobile No.</th>
+                        <th>Username</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{Customer.fullName}}</td>
+                        <td>{{Customer.address}}</td>
+                        <td>{{Customer.emailId}}</td>
+                        <td>{{Customer.mobileNo}}</td>
+                        <td>{{Customer.username}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary">
+        <p><b>Account Detail</b></p>
+        <form autocomplete="off">
+            <table class="table table-striped">
+                <thead>
+                    <tr> 
+                        <th>Account Number</th>
+                        <th> Insurance Type</th>
+                        <th> Insurance Scheme</th>
+                        <th>Date Created</th>
+                        <th>Maturity Date</th>
+                        <th>Premium Type</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{policy.id}}</td>
+                        <td>{{policy.insuranceType}}</td>
+                        <td>{{policy.insuranceSchemeName}}</td>
+                        <td>{{policy.enrollDate}}</td>
+                        <td>{{policy.maturityDate}}</td>
+                        <td>{{policy.premiumType}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    
+    
+    <div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary">
+        <p><b>Premium Detail</b></p>
+        <form autocomplete="off">
+            <table class="table table-striped">
+                <thead>
+                    <tr> 
+                        <th>Total Premium Ammount</th>
+                        <th> Profit Ratio</th>
+                        <th> Sum Assured</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{policy.investedAmount}}</td>
+                        <td>{{policy.profitRatio}}</td>
+                        <td>₹ {{policy.sumAssured}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary">
+        <p><b>Payment Detail</b></p>
+        <form autocomplete="off">
+            
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Installment No.</th>
+                        <th>Installment Date</th>
+                        <th>Installment Amount</th>
+                        <th> Payment Status</th>
+                        <th> Receipt</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let installment of policy.installments, let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{installment.date}} </td>
+                        <td>₹ {{installment.installmentAmount}}</td>
+                        <td>{{installment.status}}</td>
+                        <td><a href="#">Download</a></td>
+            
+                    </tr>
+
+        
+
+                </tbody>
+            </table>
+
+
+        </form>
+    </div>
+    <div>

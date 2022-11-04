@@ -1,0 +1,45 @@
+<app-customer-nav></app-customer-nav>
+<hr>
+<h4 align="center">Insuarance Account</h4>
+<hr>
+
+<div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary">
+    <form autocomplete="off">
+        <table class="table">
+            <thead>
+                <tr>
+                  
+                    <th>Unique Policy Number</th>
+                    <th>Insurance Type</th>
+                    <th>Insurance Scheme</th>
+                    <th>Date Created</th>
+                    <th>Maturity Date</th>
+                    <th>Premium Type</th>
+                    <th>Total Invested Amount</th>
+                    <th>Profit Ratio</th>
+                    <th>Sum Assured</th>
+                    <th>View</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let policy of enrolledPolicies">
+                    <td>{{policy.id}}</td>
+                    <td>{{policy.insuranceType}}</td>
+                    <td>{{policy.insuranceSchemeName}}</td>
+                    <td>{{policy.enrollDate}}</td>
+                    <td>{{policy.maturityDate}}</td>
+                    <td>{{policy.premiumType}}</td>
+                    <td>{{policy.investedAmount}}</td>
+                    <td>{{policy.profitRatio}}</td>
+                    <td> {{policy.sumAssured}}</td>
+                    <td> <a [routerLink]="['/customer/view-more-insurance-account',policy.id]">View More</a></td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+
+    </form>
+</div>

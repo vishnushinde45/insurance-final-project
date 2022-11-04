@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 export class AgentService {
 
   constructor(private http:HttpClient) { }
+  
 
   agentLogin(data:object){
     return this.http.post('http://localhost:8080/api/agent/login',data);

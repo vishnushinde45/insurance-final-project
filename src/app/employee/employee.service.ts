@@ -14,4 +14,8 @@ export class EmployeeService {
   getEmployees(){
     return this.http.get('http://localhost:8080/api/employees');
   }
+
+  employeeLogin(data:object){
+    return this.http.post('http://localhost:8080/api/employees/login',data);
+  }
 }
