@@ -52,8 +52,9 @@ const routes: Routes = [
    {path:'customer/view-more-insurance-account/:id',component:CustomerViewMoreInsuranceAccountComponent},
    {path:'employee/login',component:EmployeeLoginComponent},
    {path:'agent/view-commision',component:ViewCommisionComponent},
+   {path:'home/about',component:AboutComponent},
   {path:'**',component:PageNotFoundComponent},
-  {path:'home/about',component:AboutComponent}
+  
 ];
 
 @NgModule({
