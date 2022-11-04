@@ -24,6 +24,8 @@ import { CustomerInsuranceAccountComponent } from './customer/customer-insurance
 import { CustomerViewMoreInsuranceAccountComponent } from './customer/customer-view-more-insurance-account/customer-view-more-insurance-account.component';
 import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
 import { ViewCommisionComponent } from './agent/view-commision/view-commision.component';
+import { AboutComponent } from './home/about/about.component';
+
 
 
 const routes: Routes = [
@@ -50,7 +52,8 @@ const routes: Routes = [
    {path:'customer/view-more-insurance-account/:id',component:CustomerViewMoreInsuranceAccountComponent},
    {path:'employee/login',component:EmployeeLoginComponent},
    {path:'agent/view-commision',component:ViewCommisionComponent},
-  {path:'**',component:PageNotFoundComponent}
+  {path:'**',component:PageNotFoundComponent},
+  {path:'home/about',component:AboutComponent}
 ];
 
 @NgModule({

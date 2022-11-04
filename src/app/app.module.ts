@@ -38,6 +38,7 @@ import { CustomerInsuranceAccountComponent } from './customer/customer-insurance
 import { CustomerViewMoreInsuranceAccountComponent } from './customer/customer-view-more-insurance-account/customer-view-more-insurance-account.component';
 import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
 import { ViewCommisionComponent } from './agent/view-commision/view-commision.component';
+import { AboutComponent } from './home/about/about.component';
 
 
 
@@ -74,6 +75,7 @@ import { ViewCommisionComponent } from './agent/view-commision/view-commision.co
     CustomerViewMoreInsuranceAccountComponent,
     EmployeeLoginComponent,
     ViewCommisionComponent,
+    AboutComponent,
    
   ],
   imports: [

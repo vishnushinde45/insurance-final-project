@@ -14,7 +14,7 @@ export class AdminLoginComponent implements OnInit {
   constructor(private formBuilder:FormBuilder,private adminService:AdminService,private router:Router) { }
 
   adminLoginDetails=this.formBuilder.group({
-    username:new FormControl("",[Validators.required,Validators.pattern('^[a-zA-z]+$')]),
+    username:new FormControl("",[Validators.required,Validators.pattern('^[a-zA-z0-9]+$')]),
     password:new FormControl("",[Validators.required,Validators.pattern('^[a-zA-Z0-9]+$')]),
     
   });
