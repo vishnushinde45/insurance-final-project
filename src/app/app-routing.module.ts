@@ -81,6 +81,7 @@ const routes: Routes = [
    {path:'customer/view-more-insurance-account/:id',component:CustomerViewMoreInsuranceAccountComponent},
    {path:'employee/login',component:EmployeeLoginComponent},
    {path:'agent/view-commision',component:ViewCommisionComponent},
+
    {path:'employee/dashboard',component: EmployeeDashboardComponent},
    {path:'employee/add-agent',component:AddAgentComponent},
    {path:'show-insurance-plans',component:ShowInsurancePlansComponent},
@@ -112,6 +113,7 @@ const routes: Routes = [
 
  
  
+
 
 ];
 
