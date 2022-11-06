@@ -47,6 +47,27 @@ import { AddAgentComponent } from './employee/add-agent/add-agent.component';
 import { SendMailtoCustomerComponent } from './agent/send-mailto-customer/send-mailto-customer.component';
 
 import { AboutComponent } from './home/about/about.component';
+import { AgentProfileComponent } from './agent/agent-profile/agent-profile.component';
+import { AgentChangePasswordComponent } from './agent/agent-change-password/agent-change-password.component';
+import { AgentViewCustomersComponent } from './agent/agent-view-customers/agent-view-customers.component';
+import { AdminViewAgentsComponent } from './admin/admin-view-agents/admin-view-agents.component';
+import { AdminViewCommisionComponent } from './admin/admin-view-commision/admin-view-commision.component';
+import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
+import { AdminChangePasswordComponent } from './admin/admin-change-password/admin-change-password.component';
+import { CustomerProfileComponent } from './customer/customer-profile/customer-profile.component';
+import { WithdrawAmountComponent } from './agent/withdraw-amount/withdraw-amount.component';
+import { AgentViewPolicyPaymentsComponent } from './agent/agent-view-policy-payments/agent-view-policy-payments.component';
+import { EmployeeViewAgentsComponent } from './employee/employee-view-agents/employee-view-agents.component';
+import { ViewCommisionEmployeeComponent } from './employee/view-commision-employee/view-commision-employee.component';
+import { ViewPolicyPaymentsEmployeeComponent } from './employee/view-policy-payments-employee/view-policy-payments-employee.component';
+import { ViewSchemesEmployeeComponent } from './employee/view-schemes-employee/view-schemes-employee.component';
+import { ChangePasswordCustomerComponent } from './customer/change-password-customer/change-password-customer.component';
+import { ViewPolicyPaymentsAdminComponent } from './admin/view-policy-payments-admin/view-policy-payments-admin.component';
+import { ViewCustomersEmployeeComponent } from './employee/view-customers-employee/view-customers-employee.component';
+import { EmployeeProfileComponent } from './employee/employee-profile/employee-profile.component';
+import { ChangePasswordEmployeeComponent } from './employee/change-password-employee/change-password-employee.component';
+import { ViewCommisionWithdrawlsEmployeeComponent } from './employee/view-commision-withdrawls-employee/view-commision-withdrawls-employee.component';
+import { ViewCommisionWithdrawlsAdminComponent } from './admin/view-commision-withdrawls-admin/view-commision-withdrawls-admin.component';
 
 
 
@@ -93,6 +114,27 @@ import { AboutComponent } from './home/about/about.component';
     SendMailtoCustomerComponent,
 
     AboutComponent,
+      AgentProfileComponent,
+      AgentChangePasswordComponent,
+      AgentViewCustomersComponent,
+      AdminViewAgentsComponent,
+      AdminViewCommisionComponent,
+      AdminProfileComponent,
+      AdminChangePasswordComponent,
+      CustomerProfileComponent,
+      WithdrawAmountComponent,
+      AgentViewPolicyPaymentsComponent,
+      EmployeeViewAgentsComponent,
+      ViewCommisionEmployeeComponent,
+      ViewPolicyPaymentsEmployeeComponent,
+      ViewSchemesEmployeeComponent,
+      ChangePasswordCustomerComponent,
+      ViewPolicyPaymentsAdminComponent,
+      ViewCustomersEmployeeComponent,
+      EmployeeProfileComponent,
+      ChangePasswordEmployeeComponent,
+      ViewCommisionWithdrawlsEmployeeComponent,
+      ViewCommisionWithdrawlsAdminComponent,
 
    
   ],

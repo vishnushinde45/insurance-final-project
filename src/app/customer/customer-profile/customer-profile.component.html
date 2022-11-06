@@ -1,0 +1,93 @@
+<app-customer-nav></app-customer-nav>
+<hr>
+          <h4 align="center">Customer Profile </h4>
+          <hr>
+
+          <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-10">
+                    <form autocomplete="off">
+                        <div class="row mb-3">
+                          <label for="customerName" class="col-sm-2 col-form-label">Customer Name :</label>
+                          <div class="col-sm-8">
+                            <input type="text" class="form-control" id="customerName" value={{customer.fullName}} disabled>
+                          </div>
+                        </div>
+              
+                        <div class="row mb-3">
+                          <label for="dateofbirth" class="col-sm-2 col-form-label">Date of Birth :</label>
+                          <div class="col-sm-8">
+                            <input type="date" class="form-control" id="dateofbirth" value={{customer.dateOfBirth}} disabled>
+                          </div>
+                        </div>
+              
+                        <div class="row mb-3">
+                          <label for="username" class="col-sm-2 col-form-label">Username :</label>
+                          <div class="col-sm-8">
+                            <input type="text" class="form-control" id="username" value={{customer.username}} disabled>
+                          </div>
+                        </div>
+                     
+                        <div class="row mb-3">
+                          <label for="customerAddress" class="col-sm-2 col-form-label">Address :</label>
+                          <div class="col-sm-8">
+                            <input type="" class="form-control" id="customerAddress" value={{customer.address}} disabled>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label for="emailId" class="col-sm-2 col-form-label">Email ID :</label>
+                          <div class="col-sm-8">
+                            <input type="text" class="form-control" id="emailId" value={{customer.emailId}} disabled>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label for="state" class="col-sm-2 col-form-label">State :</label>
+                          <div class="col-sm-8">
+                            <input type="text" class="form-control" id="state" value={{customer.state}} disabled>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="city" class="col-sm-2 col-form-label">City :</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="city" value={{customer.city}} disabled>
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="pincode" class="col-sm-2 col-form-label">Pincode :</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="pincode" value={{customer.pincode}} disabled>
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="contactNo" class="col-sm-2 col-form-label">Contact Number :</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="contactNo" value={{customer.mobileNo}} disabled>
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="nominee" class="col-sm-2 col-form-label">Nominee :</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="nominee" value={{customer.nomineeName}} disabled>
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="nomineeRelation" class="col-sm-2 col-form-label">Nominee Relation :</label>
+                            <div class="col-sm-8">
+                                <select class="form-control" id="nomineeRelation" disabled>
+                                    <option value={{customer.nomineeRelation}} selected>{{customer.nomineeRelation}}</option>
+                                    
+                    
+                                  </select>
+                            </div>
+                          </div>
+                      
+              
+              
+                
+                      </form>
+    
+                </div>
+               
+            </div>
+        </div>

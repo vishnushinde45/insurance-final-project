@@ -31,6 +31,7 @@ message:boolean=false;
     nomineeName:new FormControl("",[Validators.required]),
     mobileNo:new FormControl("",[Validators.required]),
     nomineeRelation:new FormControl("",[Validators.required]),
+    agentId:new FormControl()
   });
 
   

@@ -2,7 +2,7 @@
 <h4 align="center">Employee Registration</h4>
     <hr><br>
     <div *ngIf="message"   class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>Success!</strong> new Employee has been added!!
+      <strong>new Employee has been added!</strong> 
       <button (click)="removeMesssag()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="container">
@@ -63,21 +63,7 @@
                       </div>
                     </div>
 
-                    <div class="row mb-3">
-                      <label for="status" class="col-sm-2 col-form-label">Status :</label>
-                      <div class="col-sm-8">
-                        <select class="form-control" id="status" formControlName="status" required>
-                          <option>Select Status:</option>
-                          <option value="Active">Active</option>
-                          <option value="Deactive">Deactive</option>
-          
-                        </select>
-                        <div *ngIf="getControl.status.touched && getControl.status.invalid" class="text-danger">
-                          <div *ngIf="getControl.status.errors"> Status is required.</div>
-                          <br>
-                  </div><br>
-                      </div>
-                    </div>
+                   
           
           
                     <div class="text-center">

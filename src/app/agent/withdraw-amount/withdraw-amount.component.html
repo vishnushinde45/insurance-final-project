@@ -1,0 +1,38 @@
+<app-agent-nav></app-agent-nav>
+
+<hr>
+<h4 align="center">Withdraw Amount </h4>
+<hr>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <form [formGroup]="withdrawAmountForm">
+
+                <h4 align="center">Your Current Account Balance is : {{agent.totalBalance}}</h4>
+
+                <div class="mb-3">
+                    <label for="customerNAme" class="form-label">Agent Name:</label>
+                    <input type="text" class="form-control" id="customerNAme" value={{agent.fullName}} disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="agentId" class="form-label">Agent Id</label>
+                    <input type="number" class="form-control" id="agentId"  value={{agent.id}} disabled>
+                </div>
+                
+            <div class="mb-3">
+                <label for="amount" class="form-label">Enter Amount to Withdraw</label>
+                <input type="text" class="form-control" id="amount" formControlName="amount">
+            </div>
+            
+            
+            <div class="text-center">
+                <button type="submit" class="btn btn-danger" (click)="onClickWithdraw()">Withdraw Amount</button>
+              </div>
+            </form>
+              
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

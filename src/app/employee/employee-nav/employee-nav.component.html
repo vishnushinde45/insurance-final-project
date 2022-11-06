@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="employee_dashboard.html">DASHBOARD</a>
+            <a class="nav-link" [routerLink]="'/employee/dashboard'">DASHBOARD</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -27,8 +27,8 @@
               ACCOUNT
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">Change Password</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/employee/profile'">Profile</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/employee/change-password'">Change Password</a></li>
             </ul>
           </li>
           
@@ -38,7 +38,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" [routerLink]="'/employee/add-agent'">ADD AGENT</a></li>
-              <li><a class="dropdown-item" href="#">VIEW AGENTS</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/employee/view-agents'">VIEW AGENTS</a></li>
             </ul>
           </li>
 
@@ -48,9 +48,9 @@
               INSURANCE
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="View-insurance-plans.html">View Insurance Plan</a></li>
-              <li><a class="dropdown-item" href="View-Policy-Payment.html">View Policy Payment</a></li>
-              <li><a class="dropdown-item" href="View-policy-Claim-Records.html">View Policy Claim</a></li>
+                <li><a class="dropdown-item" [routerLink]="'/employee/view-insurance-plans'">View Insurance Plan/Schemes</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/employee/view-policy-payment'">View Policy Payment</a></li>
+
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -58,22 +58,22 @@
               COMMISION
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="View-Commision-Records.html">VIEW COMMISSION</a></li>
-              <li><a class="dropdown-item" href="View-Commision-Withdrawls.html">VIEW COMMISSION WITHDRAWL</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/employee/view-commision'">VIEW COMMISSION</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/employee/view-commision-withdrawls'">VIEW COMMISSION WITHDRAWL</a></li>
         
             </ul>
           </li>
 
           
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">LOG OUT</a>
-          </li>
+        
           
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button type="button" class="btn btn-danger"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" (click)="onClickLogOut()">
+               LOG OUT
+        </button>
         </form>
       </div>
     </div>

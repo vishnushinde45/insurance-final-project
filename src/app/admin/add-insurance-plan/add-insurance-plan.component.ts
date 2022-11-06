@@ -48,9 +48,10 @@ message:boolean=false;
         this.insuranceService.addInsurancePlan(this.addInsurancePlanForm.value,this.addInsurancePlanForm.value.insuranceTypeId,this.addInsurancePlanForm.value.insuranceSchemeId).subscribe((res)=>{
           console.log(res);
           this.message=true;
+          alert("Plan Added Successfulyy")
      this.addInsurancePlanForm.reset({ });
         },(err)=>{
-          console.log(err);
+          alert("Added Plan")
           
         });
   }

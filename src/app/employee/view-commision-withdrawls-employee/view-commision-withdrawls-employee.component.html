@@ -1,0 +1,33 @@
+
+<app-employee-nav></app-employee-nav>
+<h4 align="center">Commision Withdrawls</h4>
+<hr>
+
+<div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary" >
+    <form autocomplete="off">
+        <table class="table table-striped" >
+            <thead>
+              <tr>
+                <th>Sr No.</th>
+                <th>Tranasaction Type</th>
+                <th>Withdrawn Amount </th>
+                <th>Agent Id</th>
+                <th>Tranasaction Date</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let withdrawl of commisionWithdrawls, let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{withdrawl.transactionType}} </td>
+                    <td>{{withdrawl.amount}}</td>
+                    <td> {{withdrawl.agentId}} </td>
+                    <td>{{withdrawl.date}}</td>
+                    
+                </tr>
+
+            </tbody>
+          </table>
+
+
+    </form>
+</div>

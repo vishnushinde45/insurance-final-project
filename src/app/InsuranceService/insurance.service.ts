@@ -53,4 +53,13 @@ export class InsuranceService {
   getEnrolledPolicyById(policyId:number){
     return this.http.get('http://localhost:8080/api/enrolled-policy/'+policyId)
   }
+
+  payInstallment(customerId:number,installmentId:number,paymentType:any){
+    return this.http.post('http://localhost:8080/api/pay-installment/'+customerId+'/'+installmentId+'/'+paymentType,customerId);
+  }
+
+  getInstallmentPayments(){
+    return this.http.get('http://localhost:8080/api/view-policy-payments');
+  }
+
 }

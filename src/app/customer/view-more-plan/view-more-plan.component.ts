@@ -22,7 +22,7 @@ export class ViewMorePlanComponent implements OnInit {
   ngOnInit(): void {
     // this.customerId=this.customerService.getCustomerId();
     // console.log(this.customerId);
-    this.customerId=sessionStorage.getItem('id');
+    this.customerId=sessionStorage.getItem('customerId');
     console.log(this.customerId);
     
     
@@ -54,8 +54,9 @@ export class ViewMorePlanComponent implements OnInit {
 
   onClickCalculateInterest(){
     let a=this.investedAmount*(Math.pow((1+this.profitRatio/100),this.policyTerm));
-    this.compoundInterest=Math.floor(a-this.investedAmount);
-    this.installmentAmount=Math.floor(this.investedAmount/(this.policyTerm*12/this.premiumType));
+    
+    this.compoundInterest=Math.floor(a-this.investedAmount)
+    this.installmentAmount=Math.floor((this.investedAmount/(this.policyTerm*12/this.premiumType)));
     this.showInterest=true;
     this.interestAmount=this.compoundInterest;
     

@@ -15,4 +15,7 @@ export class AdminService {
   getAdmin(id:number){
     return this.http.get('http://localhost:8080/api/admin/'+id);
   }
+  changePassword(data:object,adminId:number){
+    return this.http.post('http://localhost:8080/api/admin/change-password'+adminId,data);
+  }
 }

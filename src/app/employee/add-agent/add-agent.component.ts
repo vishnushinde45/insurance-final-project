@@ -21,7 +21,6 @@ export class AddAgentComponent implements OnInit {
     username:new FormControl(),
     state:new FormControl(),
     city:new FormControl(),
-    status:new FormControl(),
     emailId:new FormControl(),
     qualification:new FormControl(),
     

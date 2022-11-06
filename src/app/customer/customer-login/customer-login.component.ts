@@ -27,7 +27,7 @@ export class CustomerLoginComponent implements OnInit {
       this.responseData=res;
       this.router.navigate(['customer/dashboard'],{ queryParams: { 'id': this.responseData.id } })
       this.customerService.setCustomerId(this.responseData.id );
-      sessionStorage.setItem('id',this.responseData.id);
+      sessionStorage.setItem('customerId',this.responseData.id);
    },((err)=>{
               console.log(err);
               

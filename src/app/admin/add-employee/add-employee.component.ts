@@ -22,7 +22,6 @@ message:boolean=false;
     username:new FormControl("",Validators.required),
     state:new FormControl("",Validators.required),
     city:new FormControl("",Validators.required),
-    status:new FormControl("",Validators.required),
     emailId:new FormControl()
   });
 
@@ -30,13 +29,14 @@ message:boolean=false;
   errorMessage:any;
   
   addEmployee(){
-     this.employeeService.addEmployee(this.addEmployeeForm.value).subscribe((res)=>{
+     this.employeeService.addEmployeeByAdmin(this.addEmployeeForm.value,this.adminId).subscribe((res)=>{
       this.Employee=res;
       console.log(this.Employee);
       this.message=true;
       this.addEmployeeForm.reset({ });
+
      },(err)=>{
-      this.errorMessage=err;
+      this.errorMessage="unable to add, please try again";
       console.log(err);
       
      });

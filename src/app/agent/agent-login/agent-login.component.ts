@@ -28,9 +28,10 @@ export class AgentLoginComponent implements OnInit {
     this.agentService.agentLogin(this.agentLoginDetails.value).subscribe((res)=>{
       this.agent=res;
       this.router.navigate(['agent/dashboard'],{ queryParams: { 'id': this.agent.id } })
+       alert("Login Successfully")
       sessionStorage.setItem('agentId',this.agent.id)
    },((err:any)=>{
-              console.log(err);
+              alert("Invalid Credentials ");
               
    }));
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { InsuranceService } from 'src/app/InsuranceService/insurance.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { InsuranceService } from 'src/app/InsuranceService/insurance.service';
 })
 export class AdminNavComponent implements OnInit {
 
-  constructor(private insuranceService:InsuranceService) { }
+  constructor(private insuranceService:InsuranceService,private router:Router) { }
 
   insuranceTypes:any;
   ngOnInit(): void {
@@ -20,6 +21,10 @@ export class AdminNavComponent implements OnInit {
       console.log(err);
       
     });
+  }
+  onClickLogOut(){
+    sessionStorage.clear();
+       this.router.navigate(['']);
   }
 
 }

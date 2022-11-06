@@ -31,7 +31,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" [routerLink]="'/admin/add-employee'">ADD EMPLOYEE</a></li>
               <li><a class="dropdown-item" [routerLink]="'/admin/view-employees'">VIEW EMPLOYEES</a></li>
-              <li><a class="dropdown-item" href="#">VIEW AGENTS</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/admin/view-agents'">VIEW AGENTS</a></li>
               <li><a class="dropdown-item" [routerLink]="'/admin/view-customers'">VIEW CUSTOMERS</a></li>
             </ul>
           </li>
@@ -46,8 +46,7 @@
                 <li><a class="dropdown-item" [routerLink]="'/admin/add-insurance-scheme'">Add Insurance Scheme</a></li>
                 <li><a class="dropdown-item" [routerLink]="'/admin/add-insurance-plan'">Add Insurance Plan</a></li>
                 <li><a class="dropdown-item" [routerLink]="['/admin/view-insurance-schemes']">View Insurance Plans</a></li>
-              <li><a class="dropdown-item" href="View-Policy-Payment.html">View Policy Payment</a></li>
-              <li><a class="dropdown-item" href="View-policy-Claim-Records.html">View Policy Claim</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/admin/view-policy-payment'">View Policy Payment</a></li>
             </ul>
           </li>
           
@@ -56,51 +55,33 @@
               COMMISION
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="View-Commision-Records.html">VIEW COMMISSION</a></li>
-              <li><a class="dropdown-item" href="View-Commision-Withdrawls.html">VIEW COMMISSION WITHDRAWL</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/admin/view-commision'">VIEW COMMISSION</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/admin/view-commision-withdrawls'">VIEW COMMISSION WITHDRAWL</a></li>
         
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             QUERIES
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">ENQUIRY</a></li>
-              <li><a class="dropdown-item" href="view-feedback.html">FEEDBACK</a></li>
-           
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             SETTINGS
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" [routerLink]="'/admin/add-insurance-setting'" >INSURANCE SETTING</a></li>
-           
-            </ul>
-          </li>
+     
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              ACCOUNT
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="admin_profile.html">PROFILE</a></li>
-              <li><a class="dropdown-item" href="admin_changepassword.html">CHANGE PASSWORD</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/admin/profile'">PROFILE</a></li>
+              <li><a class="dropdown-item" [routerLink]="'/admin/change-password'">CHANGE PASSWORD</a></li>
            
             </ul>
           </li>
 
           
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">LOG OUT</a>
-          </li>
+         
           
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button type="button" class="btn btn-danger"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" (click)="onClickLogOut()">
+               LOG OUT
+        </button>
         </form>
       </div>
     </div>

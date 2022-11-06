@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3">
-             <a href="customer_profile.html">
+             <a [routerLink]="'/customer/profile'">
                 <div class="text-center">
                     <img src="assets\images\customer_dash_images\user.png" alt="" height="120px" width="120px">
                   </div>
@@ -19,63 +19,28 @@
               
         </div>
         <div class="col-md-3">
-             <a href="Customer-Document.html">
-                <div class="text-center">
-                    <img src="assets\images\customer_dash_images\documents.png" alt="" height="120px" width="120px">
-                  </div>
-                  <br>
-                  <div class="text-center">
-                    <h4>Documents</h4>
-                  </div>
-             </a>
+          <a [routerLink]="'/customer/view-insurance-account'">
+            <div class="text-center">
+                <img src="assets\images\customer_dash_images\account.png" alt="" height="120px" width="120px">
+              </div>
+              <br>
+              <div class="text-center">
+                <h4>Insurance Account</h4>
+              </div>
+        </a>
         </div>
         <div class="col-md-3">
-            <a [routerLink]="'/customer/view-insurance-account'">
-                <div class="text-center">
-                    <img src="assets\images\customer_dash_images\account.png" alt="" height="120px" width="120px">
-                  </div>
-                  <br>
-                  <div class="text-center">
-                    <h4>Insurance Account</h4>
-                  </div>
-            </a>
+          <a [routerLink]="'/customer/change-password'">
+            <div class="text-center">
+                <img src="assets\images\customer_dash_images\change_password.png" alt="" height="120px" width="120px">
+              </div>
+              <br>
+              <div class="text-center">
+                <h4>Change Password</h4>
+              </div>
+        </a>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-3">
-            <a href="#">
-                <div class="text-center">
-                    <img src="assets\images\customer_dash_images\query.png" alt="" height="120px" width="120px">
-                  </div>
-                  <br>
-                  <div class="text-center">
-                    <h4>Query or Feedback</h4>
-                  </div>
-            </a>
-        </div>
-        <div class="col-md-3">
-            <a href="#">
-                <div class="text-center">
-                    <img src="assets\images\customer_dash_images\change_password.png" alt="" height="120px" width="120px">
-                  </div>
-                  <br>
-                  <div class="text-center">
-                    <h4>Change Password</h4>
-                  </div>
-            </a>
-        </div>
-        <div class="col-md-3 ">
-            <a href="#">
-                <div class="text-center policy_claim">
-                    <img src="assets\images\customer_dash_images\policy claim.png" alt="" height="120px" width="120px">
-                  </div>
-                  <br>
-                  <div class="text-center">
-                    <h4>Policy Claim</h4>
-                  </div>
-            </a>
-        </div>
-    </div>
+ 
     
 </div>

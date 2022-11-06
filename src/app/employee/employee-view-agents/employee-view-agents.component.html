@@ -1,0 +1,34 @@
+<app-employee-nav></app-employee-nav>
+<h3 align="center">View Agent Records</h3> <hr>
+ <div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary" >
+  
+        <table class="table table-striped" id="myTable">
+            <thead>
+              <tr>
+                <th>Sr.</th>
+                <th>Full Name</th>
+                <th>Username</th>
+                <th>Agent ID</th>
+                <th>State</th>
+                <th>City</th>
+             
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let agent of Agents ,let i=index">
+                <td>{{i+1}}</td>
+                <td>{{agent.fullName}}</td>
+                <td>{{agent.username}}</td>
+                <td> {{agent.emailId}}</td>
+                <td>{{agent.state}}</td>
+                <td>{{agent.city}}</td>
+               
+                
+              </tr>
+
+            </tbody>
+          </table>
+
+
+
+</div>

@@ -90,7 +90,7 @@
                         <th>Installment Amount</th>
                         <th> Payment Status</th>
                         <th>Action</th>
-                        <th> Receipt</th>
+        
                         </tr>
                 </thead>
                 <tbody>
@@ -99,11 +99,17 @@
                         <td>{{installment.date}} </td>
                         <td>₹ {{installment.installmentAmount}}</td>
                         <td>{{installment.status}}</td>
-                        <td *ngIf="installment.status=='PENDING'; else elseBlock"><a href="#">PAY</a></td>
+                        <td *ngIf="installment.status=='PENDING'; else elseBlock">
+                          
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="onPayClick(installment)">
+                                PAY
+                              </button>
+                        
+                        </td>
                         <ng-template #elseBlock>
                             <td>--</td>
                           </ng-template>
-                        <td><a href="#">Download</a></td>
+                        
             
                     </tr>
 
@@ -116,3 +122,48 @@
  
     </div>
     <div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <form>
+                      Installment Amount :<input class="form-control" type="text" name="" id="" value={{amountTobePaid}} disabled> <br>
+                      Select Payment Type : <button type="button" class="btn btn-sm badge text-bg-warning" style="margin-left: 5px;" (click)="onCLickUPI()">UPI </button> 
+                      <button type="button" class="btn btn-sm badge text-bg-warning" style="margin-left: 5px;" (click)="onClickDEBIT()">DEBIT CARD </button>  
+                       <br> 
+                      <div *ngIf="showUPI">
+                             Your UPI ID: <input class="form-control" type="text" name="" id="" placeholder="xxxxxxxxxx@ybl etc..">
+                             <br>
+                      </div>
+                      <div *ngIf="showDebit">
+                             Card Holder : <input class="form-control" type="text" name="" id=""> <br>
+                             Card Number : <input class="form-control" type="text"> <br>
+                             CVV Number : <input class="form-control" type="text" name="" id=""> <br>
+                             Expiry Date : <input class="form-control" type="date" name="" id=""> <br>
+                      </div>
+                     
+                      <div *ngIf="payNow">
+                      <button type="button" class="btn btn-danger" (click)="onClickProceedPayment()">Proceed Payment</button>
+                    </div>
+                      
+            </form>
+            {{message}}
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Okay</button>
+        </div>
+      </div>
+    </div>
+  </div>

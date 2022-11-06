@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3">
-             <a href="#">
+             <a [routerLink]="'/employee/view-agents'">
                 <div class="text-center">
                     <img src="assets\images\employee_images\agent.png" alt="" height="120px" width="120px">
                   </div>
@@ -17,7 +17,7 @@
               
         </div>
         <div class="col-md-3">
-             <a href="#">
+             <a [routerLink]="'/employee/view-customers'">
                 <div class="text-center">
                     <img src="assets\images\employee_images\customers.png" alt="" height="120px" width="120px">
                   </div>
@@ -28,52 +28,32 @@
              </a>
         </div>
         <div class="col-md-3">
-            <a href="#">
-                <div class="text-center">
-                    <img src="assets\images\employee_images\query.png" alt="" height="120px" width="120px">
-                  </div>
-                  <br>
-                  <div class="text-center">
-                    <h4>Queries</h4>
-                  </div>
-            </a>
+          <a [routerLink]="'/employee/view-insurance-plans'">
+            <div class="text-center">
+                <img src="assets\images\employee_images\policies.png" alt="" height="120px" width="120px">
+              </div>
+              <br>
+              <div class="text-center">
+                <h4>Insurance Plans</h4>
+              </div>
+        </a>
         </div>
     </div>
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3">
-            <a href="#">
-                <div class="text-center">
-                    <img src="assets\images\employee_images\policies.png" alt="" height="120px" width="120px">
-                  </div>
-                  <br>
-                  <div class="text-center">
-                    <h4>Insurance Plans</h4>
-                  </div>
-            </a>
+          <a [routerLink]="'/employee/view-policy-payment'">
+            <div class="text-center">
+                <img src="assets\images\employee_images\policy payment.jpg" alt="" height="120px" width="120px">
+              </div>
+              <br>
+              <div class="text-center">
+                <h4>Policy Payment</h4>
+              </div>
+        </a>
         </div>
-        <div class="col-md-3">
-            <a href="#">
-                <div class="text-center">
-                    <img src="assets\images\employee_images\policy payment.jpg" alt="" height="120px" width="120px">
-                  </div>
-                  <br>
-                  <div class="text-center">
-                    <h4>Policy Payment</h4>
-                  </div>
-            </a>
-        </div>
-        <div class="col-md-3 ">
-            <a href="#">
-                <div class="text-center">
-                    <img src="assets\images\employee_images\policy claim.png" alt="" height="120px" width="120px">
-                  </div>
-                  <br>
-                  <div class="text-center">
-                    <h4>Policy Claim</h4>
-                  </div>
-            </a>
-        </div>
+       
+      
     </div>
     
 </div>

@@ -13,7 +13,8 @@ export class AgentNavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  logOut(){
+  onClickLogOut(){
+    sessionStorage.clear();
        this.router.navigate(['']);
   }
 

@@ -13,7 +13,7 @@ export class CustomerInsuranceAccountComponent implements OnInit {
   customerId:any;
   enrolledPolicies:any;
   ngOnInit(): void {
-    this.customerId=sessionStorage.getItem('id');
+    this.customerId=sessionStorage.getItem('customerId');
 
     this.insuranceService.getEnrolledPolicies(this.customerId).subscribe((res)=>{
       this.enrolledPolicies=res;

@@ -1,0 +1,33 @@
+<app-admin-nav></app-admin-nav>
+<h4 align="center">Policy Payments</h4>
+<hr>
+<div style="margin-top: 5%; margin-bottom: 5px;" class="container border border-primary" >
+    <form autocomplete="off">
+        <table class="table table-striped" >
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Customer Name</th>
+                <th>Paid Amount</th>
+                <th>Paid Date</th>
+                <th>Payment Type</th>
+             
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let installment of paidInstallments, let i=index">
+                <td>{{installment.id}}</td>
+                <td>{{installment.customerName}}</td>
+                <td>{{installment.installmentAmount}}</td>
+                <td> {{installment.paymentDate}}</td>
+                <td>{{installment.paymentType}}</td>
+    
+          
+              </tr>
+             
+            </tbody>
+          </table>
+
+
+    </form>
+</div>

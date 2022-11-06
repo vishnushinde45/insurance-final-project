@@ -40,6 +40,9 @@ export class CustomerService {
     return this.http.post('http://localhost:8080/api/customers/'+id,data);
   }
 
+  changePassword(data:object,customerId:number){
+    return this.http.post('http://localhost:8080/api/customers/change-password'+customerId,data);
+  }
 
 
 }

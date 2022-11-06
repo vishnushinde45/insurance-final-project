@@ -26,12 +26,15 @@ export class EmployeeLoginComponent implements OnInit {
     this.employeeService.employeeLogin(this.employeeLoginDetails.value).subscribe((res)=>{
       this.employeeData=res;
       this.router.navigate(['employee/dashboard'],{ queryParams: { 'id': this.employeeData.id } })
+      alert("Login Successfully!")
       sessionStorage.setItem('employeeId',this.employeeData.id )
       sessionStorage.setItem('username',this.employeeData.username);
    },((err:any)=>{
-              console.log(err);
+              console.log("Invalid Credentials");
+              
               
    }));
   }
+  
 
 }

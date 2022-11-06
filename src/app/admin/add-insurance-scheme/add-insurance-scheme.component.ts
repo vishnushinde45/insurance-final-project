@@ -48,8 +48,11 @@ export class AddInsuranceSchemeComponent implements OnInit {
       console.log(res);
       this.message=true;
      this.addSchemeForm.reset({ });
+     alert("Scheme Added Successfully!")
      
      
+    },(err)=>{
+      alert("Unable to add scheme,please try again")
     })
      
       
