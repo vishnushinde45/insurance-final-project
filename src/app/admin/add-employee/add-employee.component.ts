@@ -22,7 +22,7 @@ message:boolean=false;
     username:new FormControl("",Validators.required),
     state:new FormControl("",Validators.required),
     city:new FormControl("",Validators.required),
-    emailId:new FormControl()
+    emailId:new FormControl("",[Validators.required,Validators.email])
   });
 
   Employee:any;
