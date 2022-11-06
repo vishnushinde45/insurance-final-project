@@ -20,9 +20,9 @@ message:boolean=false;
 
   addCustomerForm=this.formBuilder.group({
     fullName:new FormControl("",[Validators.required]),
-    username:new FormControl("",[Validators.required,Validators.minLength(4)]),
+    username:new FormControl("",[Validators.required]),
     emailId:new FormControl("",[Validators.email,Validators.required]),
-    password:new FormControl("",[Validators.required,Validators.pattern('^[a-zA-Z0-9]+$'),Validators.minLength(4)]),
+    password:new FormControl("",[Validators.required,Validators.pattern('^[a-zA-Z0-9]+$')]),
     dateOfBirth:new FormControl("",[Validators.required]),
     address:new FormControl("",[Validators.required]),
     state:new FormControl("",[Validators.required]),
