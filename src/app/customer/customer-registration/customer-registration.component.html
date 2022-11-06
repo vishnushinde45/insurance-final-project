@@ -22,7 +22,7 @@
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="inputUsername" formControlName="username" required>
                 <div *ngIf="getControl.username.touched && getControl.username.invalid" class="text-danger">
-                    <div *ngIf="getControl.username.errors">Username  must be non-empty and of lenght more than 4 <br> No special characters allowed.</div>
+                    <div *ngIf="getControl.username.errors">Username  must be non-empty</div>
                     <br>
             </div><br>
         </div>
@@ -31,7 +31,7 @@
             <label for="inputPassword" class="col-sm-2 col-form-label">Password :</label>
             <div class="col-sm-8">
                 <input type="password" class="form-control" id="inputPassword" formControlName="password" required><div *ngIf="getControl.password.touched && getControl.password.invalid" class="text-danger">
-                    Password can't be empty <br> Length can't be less than 4 .</div>
+                    Password can't be empty.</div>
                     <br>
             </div><br>
         </div>
