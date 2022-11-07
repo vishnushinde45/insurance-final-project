@@ -68,6 +68,15 @@ import { EmployeeProfileComponent } from './employee/employee-profile/employee-p
 import { ChangePasswordEmployeeComponent } from './employee/change-password-employee/change-password-employee.component';
 import { ViewCommisionWithdrawlsEmployeeComponent } from './employee/view-commision-withdrawls-employee/view-commision-withdrawls-employee.component';
 import { ViewCommisionWithdrawlsAdminComponent } from './admin/view-commision-withdrawls-admin/view-commision-withdrawls-admin.component';
+import { UploadDocumentsComponent } from './customer/upload-documents/upload-documents.component';
+import { AdminGuardService } from './admin/admin-guard.service';
+import { AuthAdminService } from './admin/auth-admin.service';
+import { AgentGuardService } from './agent/agent-guard.service';
+import { AuthAgentService } from './agent/auth-agent.service';
+import { CustomerGuardService } from './customer/customer-guard.service';
+import { AuthCustomerService } from './customer/auth-customer.service';
+import { EmployeeGuardService } from './employee/employee-guard.service';
+import { AuthEmployeeService } from './employee/auth-employee.service';
 
 
 
@@ -135,6 +144,7 @@ import { ViewCommisionWithdrawlsAdminComponent } from './admin/view-commision-wi
       ChangePasswordEmployeeComponent,
       ViewCommisionWithdrawlsEmployeeComponent,
       ViewCommisionWithdrawlsAdminComponent,
+      UploadDocumentsComponent,
 
    
   ],
@@ -147,7 +157,15 @@ import { ViewCommisionWithdrawlsAdminComponent } from './admin/view-commision-wi
     HttpClientModule,
     AngularEditorModule
   ],
-  providers: [CustomerService],
+  providers: [CustomerService,
+    AdminGuardService,
+    AuthAdminService,
+    AgentGuardService,
+    AuthAgentService,
+    CustomerGuardService,
+    AuthCustomerService,
+    EmployeeGuardService,
+    AuthEmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

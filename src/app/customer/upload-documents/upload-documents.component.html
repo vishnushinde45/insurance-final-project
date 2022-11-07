@@ -1,0 +1,93 @@
+<app-customer-nav></app-customer-nav>
+<hr>
+<h4 align="center">Upload Documents</h4>
+<hr>
+
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-7">
+
+
+
+
+            <table class="table table-bordered border-primary">
+                <thead>
+                  <tr>
+                    <th scope="col">Select File</th>
+                    <th scope="col">Document Type</th>
+                    <th scope="col">Upload</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> <input class="form-control" type="file" (change)="onFileChanged($event)"></td>
+                    <td><select name="" id="" (change)="onTypeChanged($event)" class="form-control">
+                        <option selected>Select Type</option>
+                        <option value="Aadhar Card">Aadhar Card</option>
+                        <option value="Pan Card">Pan Card</option>
+                        <option value="Bank Passbook">Bank Passbook</option>
+                    </select>
+                   </td>
+                    <td>
+                        <button type="button" class="btn btn-warning btn-sm" (click)="onUpload()" value="upload">Upload</button>
+                    
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+           
+              <hr>
+                  <h4 align="center">Your Documents</h4>
+                  <table class="table table-bordered border-primary">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sr No.</th>
+                        <th scope="col">Document Type</th>
+                        <th scope="col">Download</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngIf="Customer.documents.aadharCardUrl!=null">
+                            <td>1</td>
+                            <td>Aadhar Card</td>
+                            <td>
+                                <a class="btn btn-warning btn-sm" href="{{Customer.documents.aadharCardUrl}}">Download</a>
+                            
+                            
+                            </td>
+                   
+                      </tr>
+                      <tr *ngIf="Customer.documents.panCardUrl!=null">
+                            <td>2</td>
+                            <td>Pan Card</td>
+                            <td>
+                                <a class="btn btn-warning btn-sm" href="{{Customer.documents.panCardUrl}}">Download</a>
+                            
+                            </td>
+                      </tr>
+                      <tr *ngIf="Customer.documents.bankPassbookUrl!=null">
+                                <td>3</td>
+                                <td>Bank Passbook</td>
+                                <td>
+                                    <a class="btn btn-warning btn-sm" href="{{Customer.documents.bankPassbookUrl}}">Download</a>
+                                </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+            
+                
+        
+        
+         
+        </div>
+
+    </div>
+  </div>
+    
+
+
+       
+     

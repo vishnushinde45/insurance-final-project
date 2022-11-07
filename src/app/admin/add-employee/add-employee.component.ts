@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup,FormControl,Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 import { EmployeeService } from 'src/app/employee/employee.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { EmployeeService } from 'src/app/employee/employee.service';
 })
 export class AddEmployeeComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder,private employeeService:EmployeeService) { }
+  constructor(private formBuilder:FormBuilder,private employeeService:EmployeeService,private router:Router) { }
 
   adminId:any;
   ngOnInit(): void {

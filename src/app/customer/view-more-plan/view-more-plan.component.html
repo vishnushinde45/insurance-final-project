@@ -42,21 +42,77 @@
       <hr>
 
       <div class="interestCalculator">
-          Policy Term (No of Years) :<input type="number" name="" id="" [(ngModel)]="policyTerm">
-          Total Investment INR:<input type="number" name="" id="" [(ngModel)]="investedAmount">
-          Premium Type <select name="" id="" [(ngModel)]="premiumType">
-                            <option value=3>3 Months</option>
-                            <option value=6>6 Months</option>
-                            <option value=12>12 Months</option>
-                          </select>
-          
-                          <input type="submit" value="Calculate" (click)="onClickCalculateInterest()">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-7">
+              <table  class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Policy Term</th>
+                    <th scope="col">Total Investment Amount</th>
+                    <th scope="col">Premium Type</th>
+                    <th scope="col">Calculate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input class="form-control" type="number" name="" id="" [(ngModel)]="policyTerm">
+                    </td>
+                    <td>
+                      <input class="form-control" type="number" name="" id="" [(ngModel)]="investedAmount">
+                    </td>
+                    <td>
+                      <select class="form-control" name="" id="" [(ngModel)]="premiumType">
+                       
+                        <option value=3>3 Months</option>
+                        <option value=6>6 Months</option>
+                        <option value=12>12 Months</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input class="btn btn-danger" type="submit" value="Calculate" (click)="onClickCalculateInterest()">
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>               
       </div>
 
       <div align="center" class="interestResultBox" *ngIf="showInterest">
-               Total Investment:{{investedAmount}} <br>
-               Installment Amount : {{installmentAmount}} <br>
-               Interest : {{compoundInterest}} <br>
+        <div align="center" class="interestResultBox" *ngIf="showInterest">
+          <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-7">
+    
+                  <table class="table table-bordered border-primary">
+                    <thead>
+                      <tr>
+                        <th scope="col">Total Investment</th>
+                        <th scope="col">Installment Amount</th>
+                        <th scope="col">Interest</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{{investedAmount}}</td>
+                        <td>{{installmentAmount}}</td>
+                        <td>{{compoundInterest}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                    
+           </div>
+                </div>
+            </div>
+          </div>
            
 
               <button type="button" class="btn btn-danger btn-lg"  (click)="onClickBuy()" >

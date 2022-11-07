@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AgentService } from '../agent.service';
+import { AuthAgentService } from '../auth-agent.service';
 
 @Component({
   selector: 'app-agent-login',
@@ -10,7 +11,8 @@ import { AgentService } from '../agent.service';
 })
 export class AgentLoginComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder,private router:Router,private agentService:AgentService) { }
+  constructor(private formBuilder:FormBuilder,private router:Router,private agentService:AgentService,
+    private authAgentService:AuthAgentService) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +29,7 @@ export class AgentLoginComponent implements OnInit {
   onLoginClick(){
     this.agentService.agentLogin(this.agentLoginDetails.value).subscribe((res)=>{
       this.agent=res;
+      this.authAgentService.login();
       this.router.navigate(['agent/dashboard'],{ queryParams: { 'id': this.agent.id } })
        alert("Login Successfully")
       sessionStorage.setItem('agentId',this.agent.id)

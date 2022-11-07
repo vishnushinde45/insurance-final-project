@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { AdminService } from '../admin.service';
 
@@ -13,7 +13,8 @@ export class AdminDashboardComponent implements OnInit {
   id!:number;
    Admin!:any;
    
-  constructor(private activatedRoute:ActivatedRoute,private adminService:AdminService) { }
+  constructor(private activatedRoute:ActivatedRoute,private adminService:AdminService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((params)=>{

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthEmployeeService } from '../auth-employee.service';
 
 @Component({
   selector: 'app-employee-nav',
@@ -8,11 +9,12 @@ import { Router } from '@angular/router';
 })
 export class EmployeeNavComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private authEmployeeService:AuthEmployeeService) { }
 
   ngOnInit(): void {
   }
   onClickLogOut(){
+    this.authEmployeeService.logout();
     sessionStorage.clear();
        this.router.navigate(['']);
   }

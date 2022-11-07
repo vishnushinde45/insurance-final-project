@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup,FormControl,Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 import { AngularEditorConfig, AngularEditorModule } from '@kolkov/angular-editor';
 import { InsuranceService } from 'src/app/InsuranceService/insurance.service';
 
@@ -11,7 +12,7 @@ import { InsuranceService } from 'src/app/InsuranceService/insurance.service';
 })
 export class AddInsuranceSchemeComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder,private insuranceService:InsuranceService) { }
+  constructor(private formBuilder:FormBuilder,private insuranceService:InsuranceService,private router:Router) { }
 
   htmlContent='';
   addSchemeForm=this.formBuilder.group({
@@ -26,6 +27,11 @@ export class AddInsuranceSchemeComponent implements OnInit {
   insuranceTypes:any;
   
   ngOnInit(): void {
+    //Authentication
+    if(sessionStorage.getItem('adminId')==null){
+      this.router.navigate(['']);
+
+    }
     this.insuranceService.getInsuranceTypes().subscribe((res)=>{
        this.insuranceTypes=res;
        console.log(this.insuranceTypes);

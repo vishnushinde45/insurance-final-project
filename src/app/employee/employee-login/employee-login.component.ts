@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup,FormControl,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthEmployeeService } from '../auth-employee.service';
 import { EmployeeService } from '../employee.service';
 
 @Component({
@@ -10,7 +11,8 @@ import { EmployeeService } from '../employee.service';
 })
 export class EmployeeLoginComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder,private router:Router,private employeeService:EmployeeService) { }
+  constructor(private formBuilder:FormBuilder,private router:Router,private employeeService:EmployeeService,
+    private authEmployeeService:AuthEmployeeService) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +28,7 @@ export class EmployeeLoginComponent implements OnInit {
     this.employeeService.employeeLogin(this.employeeLoginDetails.value).subscribe((res)=>{
       this.employeeData=res;
       this.router.navigate(['employee/dashboard'],{ queryParams: { 'id': this.employeeData.id } })
+      this.authEmployeeService.login();
       alert("Login Successfully!")
       sessionStorage.setItem('employeeId',this.employeeData.id )
       sessionStorage.setItem('username',this.employeeData.username);

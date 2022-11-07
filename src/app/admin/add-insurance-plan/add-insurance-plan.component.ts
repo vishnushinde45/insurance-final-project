@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, FormControl,Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 import { InsuranceService } from 'src/app/InsuranceService/insurance.service';
 
 @Component({
@@ -9,12 +10,13 @@ import { InsuranceService } from 'src/app/InsuranceService/insurance.service';
 })
 export class AddInsurancePlanComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder,private insuranceService:InsuranceService) { }
+  constructor(private formBuilder:FormBuilder,private insuranceService:InsuranceService,private router:Router) { }
 
 
   insuranceSchemes:any;
   insuranceTypes:any;
   ngOnInit(): void {
+   
     this.insuranceService.getInsuranceSchemes().subscribe((res)=>{
       this.insuranceSchemes=res;
       
